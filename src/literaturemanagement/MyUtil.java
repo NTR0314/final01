@@ -12,4 +12,18 @@ public class MyUtil {
         return result;
     }
 
+    public static int lengthOfShorterAuthorArray(Author[] array1, Author[] array2) {
+        if (array1.length > array2.length) {
+            return array1.length;
+        }
+
+        if (array2.length > array1.length) {
+            return array2.length;
+        }
+
+        else return array1.length;
+
+
+    }
+
 }

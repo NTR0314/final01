@@ -2,8 +2,6 @@ package literaturemanagement;
 
 import literaturemanagement.venues.Venue;
 
-import java.util.ArrayList;
-
 public class Article extends Publication {
     private final Venue venue;
     private final String[] localKeywords; //Exception Kleinbuchstaben & keine Buchstabe
