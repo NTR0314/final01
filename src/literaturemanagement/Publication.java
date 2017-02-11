@@ -1,7 +1,7 @@
 package literaturemanagement;
 
 public class Publication {
-    private final String identifier;
+    private final String identifier; //besteht aus kleinbuchstaben udn Zahlen
     private final String title;
     private final int yearOfPublication;
     private final Author authors[];

@@ -1,8 +1,13 @@
 package literaturemanagement;
 
-public class Reference implements Comparable<Reference>{
+public class Reference implements Comparable<Reference> {
     private Publication publication;
     private String shortForm;
+
+    public Reference(Publication publication, String shortForm) {
+        this.publication = publication;
+        this.shortForm = shortForm;
+    }
 
     public Publication getPublication() {
         return publication;

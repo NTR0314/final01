@@ -1,5 +1,8 @@
 package literaturemanagement;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class MyUtil {
 
     public static String[] addTwoStringArrays(String[] array1, String[] array2) {
@@ -19,11 +22,21 @@ public class MyUtil {
 
         if (array2.length > array1.length) {
             return array2.length;
+        } else return array1.length;
+
+
+    }
+
+    public static void sortReferenceArrayList(ArrayList<Reference> references) {
+        for (int i = 0; i < references.size(); i++) {
+            for (int j = 0; j < references.size(); j++) {
+                if (references.get(j).compareTo(references.get(j + 1)) > 0) {
+                    Collections.swap(references, j, j + 1);
+                    break;
+                }
+
+            }
         }
-
-        else return array1.length;
-
-
     }
 
 }
