@@ -25,8 +25,8 @@ public class LiteratureManager {
     public void runCommands(String[] commands) {
         for (int i = 0; i < commands.length; i++) {
             for (int j = 0; j < CommandArray.COMMAND_ARRAY.length; j++) {
-                if (commands[i].matches(CommandArray.COMMAND_ARRAY[i].getRegex())) {
-                    CommandArray.COMMAND_ARRAY[i].execute(commands[i]);
+                if (commands[i].matches(CommandArray.COMMAND_ARRAY[j].getRegex())) {
+                    CommandArray.COMMAND_ARRAY[j].execute(this, commands[i]);
                 }
 
             }

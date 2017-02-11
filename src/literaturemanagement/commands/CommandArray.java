@@ -5,7 +5,8 @@ public class CommandArray {
     }
 
     public static final Command[] COMMAND_ARRAY = {
-            new Quit()
+            new Quit(),
+            new AddAuthor()
 
     };
 }

@@ -1,5 +1,6 @@
 package literaturemanagement.commands;
 
+import edu.kit.informatik.Terminal;
 import literaturemanagement.Author;
 import literaturemanagement.LiteratureManager;
 
@@ -23,6 +24,8 @@ public class AddAuthor extends Command {
         String[] splitInput = cutInput.split(",");
 
         literatureManager.getAuthorList().addAuthor(new Author(splitInput[0], splitInput[1]));
+
+        Terminal.printLine("Ok");
 
 
     }
