@@ -1,19 +1,19 @@
 package literaturemanagement.venues;
 
 import literaturemanagement.Article;
-import literaturemanagement.ConferenceSeries;
-import literaturemanagement.MyUtil;
 
-public class Conference extends Venue{
-    private Article[] articles;
-    private ConferenceSeries conferenceSeries;
+import java.util.ArrayList;
 
-    public Conference(String title, String topic, int year, String[] localKeywords, Article[] articles, ConferenceSeries conferenceSeries) {
-        super(title, topic, year, localKeywords);
-        this.setKeywords(MyUtil.addTwoStringArrays(localKeywords, getKeywords()));
-        this.articles = articles;
-        this.conferenceSeries = conferenceSeries;
+public class Conference {
+
+    private final String seriesName;
+    private final int year;
+    private final String location;
+    private ArrayList<Article> articles;
+
+    public Conference(String seriesName, int year, String location) {
+        this.seriesName = seriesName;
+        this.year = year;
+        this.location = location;
     }
-
-
 }

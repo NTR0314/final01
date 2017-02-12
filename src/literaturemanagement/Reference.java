@@ -1,23 +1,23 @@
 package literaturemanagement;
 
 public class Reference implements Comparable<Reference> {
-    private Publication publication;
+    private Article article;
     private String shortForm;
 
-    public Reference(Publication publication, String shortForm) {
-        this.publication = publication;
+    public Reference(Article article, String shortForm) {
+        this.article = article;
         this.shortForm = shortForm;
     }
 
-    public Publication getPublication() {
-        return publication;
+    public Article getArticle() {
+        return article;
     }
 
     @Override
     public int compareTo(Reference reference2) {
-        for (int i = 0; i < MyUtil.lengthOfShorterAuthorArray(publication.getAuthors(), reference2.getPublication().getAuthors()); i++) {
-            if (publication.getAuthors()[i].compareTo(reference2.getPublication().getAuthors()[i]) != 0) {
-                return publication.getAuthors()[i].compareTo(reference2.getPublication().getAuthors()[i]);
+        for (int i = 0; i < MyUtil.lengthOfShorterAuthorArray(article.getAuthors(), reference2.getArticle().getAuthors()); i++) {
+            if (article.getAuthors()[i].compareTo(reference2.getArticle().getAuthors()[i]) != 0) {
+                return article.getAuthors()[i].compareTo(reference2.getArticle().getAuthors()[i]);
             }
 
 

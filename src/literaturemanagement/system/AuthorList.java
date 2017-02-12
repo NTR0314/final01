@@ -1,4 +1,6 @@
-package literaturemanagement;
+package literaturemanagement.system;
+
+import literaturemanagement.Author;
 
 import java.util.ArrayList;
 

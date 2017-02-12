@@ -2,13 +2,14 @@ package literaturemanagement;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.commands.CommandArray;
-
-import java.util.ArrayList;
+import literaturemanagement.system.AuthorList;
+import literaturemanagement.system.JournalList;
 
 public class LiteratureManager {
     private boolean programmFlow = true;
 
     private AuthorList authorList;
+    private JournalList journalList;
 
     public LiteratureManager(AuthorList authorList) {
         this.authorList = authorList;
@@ -41,5 +42,9 @@ public class LiteratureManager {
 
     public AuthorList getAuthorList() {
         return authorList;
+    }
+
+    public JournalList getJournalList() {
+        return journalList;
     }
 }

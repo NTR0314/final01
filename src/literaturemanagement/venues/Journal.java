@@ -1,8 +1,19 @@
 package literaturemanagement.venues;
 
-public class Journal extends Venue{
+import literaturemanagement.Article;
 
-    public Journal(String title, String topic, int year, String[] localKeywords) {
-        super(title, topic, year, localKeywords);
+import java.util.ArrayList;
+
+public class Journal {
+
+    private final String name;
+
+    private final String publisher;
+
+    private ArrayList<Article> articles;
+
+    public Journal(String name, String publisher) {
+        this.name = name;
+        this.publisher = publisher;
     }
 }

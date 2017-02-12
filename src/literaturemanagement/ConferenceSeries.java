@@ -9,18 +9,10 @@ public class ConferenceSeries {
 
     private final String name;
 
-    private final String[] keywords;
+    private ArrayList<String> keywords;
 
-    private final String[] localKeywords;
-
-    public ConferenceSeries(ArrayList<Conference>[] conferences, String name, String[] localKeywords) {
-        this.conferences = conferences;
+    public ConferenceSeries(String name) {
         this.name = name;
-        this.keywords = localKeywords;
-        this.localKeywords = localKeywords;
     }
 
-    public String[] getKeywords() {
-        return localKeywords;
-    }
 }
