@@ -16,4 +16,6 @@ public class Conference {
         this.year = year;
         this.location = location;
     }
+
+
 }
