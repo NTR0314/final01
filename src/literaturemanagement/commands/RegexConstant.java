@@ -6,7 +6,7 @@ interface RegexConstant {
 
     String PUBLICATION_IDENTIFIER = "[a-z0-9]+";
 
-    String PERSON_NAME = "[A-Z][a-z]+";
+    String PERSON_CITY_NAME = "[A-Z\u00c4\u00d6\u00dc][a-z\u00fc\u00e4\u00f6]+";
 
     String YEAR = "\\d\\d\\d\\d";
 
@@ -14,11 +14,13 @@ interface RegexConstant {
 
     String QUIT = "quit";
 
-    String ADD_AUTHOUR = "add author " + PERSON_NAME + "," + PERSON_NAME;
+    String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
 
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + EVENT_NAME;
 
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
+
+    String ADD_CONFERENCE = "add conference " + EVENT_NAME + "," + YEAR + "," + PERSON_CITY_NAME;
 
 
 }

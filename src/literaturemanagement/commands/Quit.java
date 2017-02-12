@@ -1,5 +1,6 @@
 package literaturemanagement.commands;
 
+import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
 
 public class Quit extends Command {
@@ -15,6 +16,9 @@ public class Quit extends Command {
 
     @Override
     public void execute(LiteratureManager literatureManager, String input) {
-        literatureManager.setProgrammFlow(false);
+        literatureManager.setProgramFlow(false);
+
+        Terminal.printLine("Ok");
+
     }
 }

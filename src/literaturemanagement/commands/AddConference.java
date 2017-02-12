@@ -2,11 +2,11 @@ package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
-import literaturemanagement.venues.Journal;
+import literaturemanagement.venues.Conference;
 
-public class AddJournal extends Command{
-    protected AddJournal() {
-        super(RegexConstant.ADD_JOURNAL);
+public class AddConference extends Command{
+    protected AddConference() {
+        super(RegexConstant.ADD_CONFERENCE);
     }
 
     @Override
@@ -17,11 +17,10 @@ public class AddJournal extends Command{
     @Override
     public void execute(LiteratureManager literatureManager, String input) {
         String cutInput = cutString(input);
-        String[] splitCuttedInput = cutInput.split(",");
+        String[] splittedCuttedInput = cutInput.split(",");
 
-        Journal journalToAdd = new Journal(splitCuttedInput[0], splitCuttedInput[1]);
-
-        literatureManager.getJournalList().addJournal(journalToAdd);
+        literatureManager.getConferenceList().addConference(new Conference(splittedCuttedInput[0],
+                Integer.parseInt(splittedCuttedInput[1]), splittedCuttedInput[2]));
 
         Terminal.printLine("Ok");
 

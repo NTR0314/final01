@@ -8,7 +8,8 @@ public class CommandArray {
             new Quit(),
             new AddAuthor(),
             new AddJournal(),
-            new AddConferenceSeries()
+            new AddConferenceSeries(),
+            new AddConference()
 
     };
 }
