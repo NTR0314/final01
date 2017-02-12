@@ -14,13 +14,11 @@ public class ConferenceSeriesList {
 
     public ConferenceSeries getConferenceSeries(String nameAsIdentifier) {
         for (int i = 0; i < this.conferenceSeriesList.size(); i++) {
-            if (this.conferenceSeriesList.get(i).getName() == nameAsIdentifier) {
+            if (this.conferenceSeriesList.get(i).getName().equals(nameAsIdentifier)) {
                 return this.conferenceSeriesList.get(i);
             }
         }
-
         Terminal.printError("ConferenceSeries not found");
-        //TODO MICHAEL FRAGU WIE IC HDAS HÄMDLE DASS SEIN KANN DAS KEIN CS GEFUDNEN WIRD WAS DAN RETUNRNEN UND SOOO ;D
         return null;
     }
 }

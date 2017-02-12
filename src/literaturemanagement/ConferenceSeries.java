@@ -7,9 +7,7 @@ import java.util.ArrayList;
 public class ConferenceSeries {
     private ArrayList<Conference> conferences;
     private ArrayList<Article> articles;
-
     private final String name;
-
     private ArrayList<String> keywords;
 
     public ConferenceSeries(String name) {
@@ -20,7 +18,7 @@ public class ConferenceSeries {
         return name;
     }
 
-    public void addArticle(Article article) {
-        this.articles.add(article);
+    public ArrayList<Article> getArticles() {
+        return articles;
     }
 }

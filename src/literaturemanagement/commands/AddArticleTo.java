@@ -22,8 +22,15 @@ public class AddArticleTo extends Command {
         Article articleToAdd = new Article(splittedCutInput[1], splittedCutInput[3],
                 Integer.parseInt(splittedCutInput[2]));
 
-        if (splittedCutInput[0] == "journal") {
-            
+        if (splittedCutInput[0].equals("journal") &&
+                literatureManager.getJournalList().getJournal(splittedCutInput[0]) != null) {
+            literatureManager.getJournalList().getJournal(splittedCutInput[0]).getArticles().add(articleToAdd);
+
+        }
+
+        else if(literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0]) != null) {
+            literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0])
+                    .getArticles().add(articleToAdd);
         }
     }
 }

@@ -10,10 +10,18 @@ public class Journal {
 
     private final String publisher;
 
-    private ArrayList<Article> articles;
+    private ArrayList<Article> articles = new ArrayList<>();
 
     public Journal(String name, String publisher) {
         this.name = name;
         this.publisher = publisher;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Article> getArticles() {
+        return articles;
     }
 }
