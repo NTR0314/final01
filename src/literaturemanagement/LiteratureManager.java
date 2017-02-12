@@ -2,10 +2,9 @@ package literaturemanagement;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.commands.CommandArray;
-import literaturemanagement.system.AuthorList;
-import literaturemanagement.system.ConferenceList;
-import literaturemanagement.system.ConferenceSeriesList;
-import literaturemanagement.system.JournalList;
+import literaturemanagement.system.*;
+
+import java.util.ArrayList;
 
 public class LiteratureManager {
     private boolean programFlow = true;
@@ -14,6 +13,7 @@ public class LiteratureManager {
     private JournalList journalList = new JournalList();
     private ConferenceSeriesList conferenceSeriesList = new ConferenceSeriesList();
     private ConferenceList conferenceList = new ConferenceList();
+    private ArticleList articleList = new ArticleList();
 
 
     public static void main(String[] args) {
@@ -55,5 +55,9 @@ public class LiteratureManager {
 
     public ConferenceList getConferenceList() {
         return conferenceList;
+    }
+
+    public ArticleList getArticleList() {
+        return articleList;
     }
 }

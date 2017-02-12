@@ -15,14 +15,14 @@ public class MyUtil {
         return result;
     }
 
-    public static int lengthOfShorterAuthorArray(Author[] array1, Author[] array2) {
-        if (array1.length > array2.length) {
-            return array1.length;
+    public static int lengthOfShorterAuthorArrayList(ArrayList a, ArrayList b) {
+        if (a.size() > b.size()) {
+            return a.size();
         }
 
-        if (array2.length > array1.length) {
-            return array2.length;
-        } else return array1.length;
+        if (b.size() > a.size()) {
+            return b.size();
+        } else return a.size();
 
 
     }

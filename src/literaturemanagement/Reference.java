@@ -15,9 +15,9 @@ public class Reference implements Comparable<Reference> {
 
     @Override
     public int compareTo(Reference reference2) {
-        for (int i = 0; i < MyUtil.lengthOfShorterAuthorArray(article.getAuthors(), reference2.getArticle().getAuthors()); i++) {
-            if (article.getAuthors()[i].compareTo(reference2.getArticle().getAuthors()[i]) != 0) {
-                return article.getAuthors()[i].compareTo(reference2.getArticle().getAuthors()[i]);
+        for (int i = 0; i < MyUtil.lengthOfShorterAuthorArrayList(article.getAuthors(), reference2.getArticle().getAuthors()); i++) {
+            if (article.getAuthors().get(i).compareTo(reference2.getArticle().getAuthors().get(i)) != 0) {
+                return article.getAuthors().get(i).compareTo(reference2.getArticle().getAuthors().get(i));
             }
 
 
