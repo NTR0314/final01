@@ -19,6 +19,6 @@ public class Quit extends Command {
         literatureManager.setProgramFlow(false);
 
         Terminal.printLine("Ok");
- 
+
     }
 }

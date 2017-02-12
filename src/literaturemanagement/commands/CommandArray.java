@@ -9,7 +9,8 @@ public class CommandArray {
             new AddAuthor(),
             new AddJournal(),
             new AddConferenceSeries(),
-            new AddConference()
+            new AddConference(),
+            new AddArticleTo()
 
     };
 }
