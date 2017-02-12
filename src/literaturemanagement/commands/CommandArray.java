@@ -7,7 +7,8 @@ public class CommandArray {
     public static final Command[] COMMAND_ARRAY = {
             new Quit(),
             new AddAuthor(),
-            new AddJournal()
+            new AddJournal(),
+            new AddConferenceSeries()
 
     };
 }

@@ -3,21 +3,20 @@ package literaturemanagement;
 import edu.kit.informatik.Terminal;
 import literaturemanagement.commands.CommandArray;
 import literaturemanagement.system.AuthorList;
+import literaturemanagement.system.ConferenceSeriesList;
 import literaturemanagement.system.JournalList;
 
 public class LiteratureManager {
     private boolean programmFlow = true;
 
-    private AuthorList authorList;
-    private JournalList journalList;
+    private AuthorList authorList = new AuthorList();
+    private JournalList journalList = new JournalList();
+    private ConferenceSeriesList conferenceSeriesList = new ConferenceSeriesList();
 
-    public LiteratureManager(AuthorList authorList) {
-        this.authorList = authorList;
-    }
 
     public static void main(String[] args) {
 
-        LiteratureManager literatureManager = new LiteratureManager(new AuthorList());
+        LiteratureManager literatureManager = new LiteratureManager();
         while (literatureManager.programmFlow) {
             literatureManager.runCommands(Terminal.readFile("C:\\Users\\Bosswald\\Desktop\\hehexd.txt"));
         }
@@ -46,5 +45,9 @@ public class LiteratureManager {
 
     public JournalList getJournalList() {
         return journalList;
+    }
+
+    public ConferenceSeriesList getConferenceSeriesList() {
+        return conferenceSeriesList;
     }
 }

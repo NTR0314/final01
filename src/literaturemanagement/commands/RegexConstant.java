@@ -17,4 +17,8 @@ interface RegexConstant {
     String ADD_AUTHOUR = "add author " + PERSON_NAME + "," + PERSON_NAME;
 
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + EVENT_NAME;
+
+    String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
+
+
 }
