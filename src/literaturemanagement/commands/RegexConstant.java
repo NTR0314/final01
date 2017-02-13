@@ -30,5 +30,7 @@ public interface RegexConstant {
 
     String WRITTEN_BY = "written-by " + PUBLICATION_IDENTIFIER + "," + TITLE;
 
+    String CITES = "cites " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
+
 
 }

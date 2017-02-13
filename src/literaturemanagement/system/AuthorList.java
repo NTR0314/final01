@@ -11,4 +11,12 @@ public class AuthorList {
     public void addAuthor(Author author) {
         this.authorList.add(author);
     }
+
+    public Author getAtIndex(int index) {
+        return this.authorList.get(index);
+    }
+
+    public ArrayList<Author> getAuthorList() {
+        return authorList;
+    }
 }

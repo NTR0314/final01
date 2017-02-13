@@ -25,4 +25,8 @@ public class Article {
     public String getIdentifier() {
         return identifier;
     }
+
+    public ArrayList<Article> getReferences() {
+        return references;
+    }
 }
