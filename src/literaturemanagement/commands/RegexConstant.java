@@ -16,7 +16,11 @@ public interface RegexConstant {
 
     String VENUE = "journal " + EVENT_NAME + "|conference " + EVENT_NAME + "," + YEAR;
 
+    String ENTITIY = "(pub|journal|series) ([a-z\u00e4\u00fc\u00f6]+[0-9]+|([A-Za-z\u00e4\u00fc\u00f6\u00c4\u00dc\u00d6])+)";
+
     String QUIT = "quit";
+
+    String KEYWORDS = "[a-z]+(;?[a-z])*";
 
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
 
@@ -31,6 +35,8 @@ public interface RegexConstant {
     String WRITTEN_BY = "written-by " + PUBLICATION_IDENTIFIER + "," + TITLE;
 
     String CITES = "cites " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
+
+    String ADD_KEYWORDS_TO = "add keywords to " + ENTITIY + ":" + KEYWORDS;
 
 
 }

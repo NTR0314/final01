@@ -12,7 +12,8 @@ public class CommandArray {
             new AddConference(),
             new AddArticleTo(),
             new WrittenBy(),
-            new Cites()
+            new Cites(),
+            new AddKeywordsTo()
 
     };
 }

@@ -1,6 +1,7 @@
 package literaturemanagement;
 
 import literaturemanagement.system.AuthorList;
+import literaturemanagement.system.KeywordList;
 
 import java.util.ArrayList;
 
@@ -10,6 +11,7 @@ public class Article {
     private final int yearOfPublication;
     private AuthorList authorList = new AuthorList();
     private ArrayList<Article> references = new ArrayList<>();
+    private KeywordList keywordList = new KeywordList();
 
 
     public Article(String identifier, String title, int yearOfPublication) {
@@ -28,5 +30,9 @@ public class Article {
 
     public ArrayList<Article> getReferences() {
         return references;
+    }
+
+    public KeywordList getKeywordList() {
+        return keywordList;
     }
 }

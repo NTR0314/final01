@@ -39,4 +39,20 @@ public class MyUtil {
         }
     }
 
+    /**
+     * checkt ob ein Keyword bereits in einer Liste vorhanden ist, falls ja gibt die Methode true zurück
+     * sosnt false
+     */
+    public static boolean checkForKeywords(ArrayList<String> arrayList, String keywordToLookFor) {
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (arrayList.get(i).equals(keywordToLookFor)) {
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
 }
