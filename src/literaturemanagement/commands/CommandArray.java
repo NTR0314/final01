@@ -13,7 +13,8 @@ public class CommandArray {
             new AddArticleTo(),
             new WrittenBy(),
             new Cites(),
-            new AddKeywordsTo()
+            new AddKeywordsTo(),
+            new AllPublications()
 
     };
 }

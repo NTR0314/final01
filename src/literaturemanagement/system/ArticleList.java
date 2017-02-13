@@ -18,4 +18,12 @@ public class ArticleList {
         Terminal.printError("Article not found");
         return null;
     }
+
+    public int getLength() {
+        return this.articleList.size();
+    }
+
+    public Article getAtIndex(int index) {
+        return this.articleList.get(index);
+    }
 }

@@ -35,4 +35,12 @@ public class Article {
     public KeywordList getKeywordList() {
         return keywordList;
     }
+
+    public boolean isValid() {
+        if (this.getAuthorList().getAuthorList().isEmpty()) {
+            return false;
+        }
+
+        return true;
+    }
 }
