@@ -16,10 +16,7 @@ public class AllPublications extends Command{
     @Override
     public void execute(LiteratureManager literatureManager, String input) {
         for (int i = 0; i < literatureManager.getArticleList().getLength(); i++) {
-            if (literatureManager.getArticleList().getAtIndex(i).isValid()) {
                 Terminal.printLine(literatureManager.getArticleList().getAtIndex(i).getIdentifier());
-            }
-
         }
 
     }
