@@ -23,6 +23,7 @@ public interface RegexConstant {
     String ADD_KEYWORDS_TO = "add keywords to " + ENTITIY + ":" + KEYWORDS;
     String ALL_PUBLICATIONS = "all publications";
     String LIST_INVALID_PUBLICATIONS = "list invalid publications";
+    String PUBLICATIONS_BY = "publications by [; A-Za-zÖÜÄöäü]+";
 
 
 }

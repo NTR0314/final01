@@ -15,7 +15,8 @@ public class CommandArray {
             new Cites(),
             new AddKeywordsTo(),
             new AllPublications(),
-            new ListInvalidPublications()
+            new ListInvalidPublications(),
+            new PublicationsBy()
 
     };
 }
