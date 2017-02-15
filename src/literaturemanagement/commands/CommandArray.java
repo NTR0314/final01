@@ -19,7 +19,8 @@ public class CommandArray {
             new PublicationsBy(),
             new InProceedings(),
             new FindKeywords(),
-            new Jaccard()
+            new Jaccard(),
+            new Similarity()
 
     };
 }

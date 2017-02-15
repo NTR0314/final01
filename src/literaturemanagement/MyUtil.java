@@ -61,6 +61,10 @@ public class MyUtil {
 
     }
 
+    public static String formatTo3AfterCommaNumbers(double number) {
+        return String.format(Locale.UK, "%.3f", ((int) (number * 1000) / 1000.0f));
+    }
+
     public static String jaccard(KeywordList k1, KeywordList k2) {
         if(k1.getLength() == 0 && k2.getLength() == 0) {
             Terminal.printLine("1.000");
@@ -68,7 +72,7 @@ public class MyUtil {
 
         double result = (k1.intersection(k2).getLength() / k1.union(k2).getLength());
 
-        return String.format(Locale.UK, "%.3f", ((int) (result * 1000) / 1000.0f));
+        return formatTo3AfterCommaNumbers(result);
 
     }
 
