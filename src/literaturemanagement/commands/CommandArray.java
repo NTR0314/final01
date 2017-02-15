@@ -18,7 +18,8 @@ public class CommandArray {
             new ListInvalidPublications(),
             new PublicationsBy(),
             new InProceedings(),
-            new FindKeywords()
+            new FindKeywords(),
+            new Jaccard()
 
     };
 }

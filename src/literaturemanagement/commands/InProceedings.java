@@ -22,7 +22,7 @@ public class InProceedings extends Command {
         int yearToLookFor = Integer.parseInt(splitCutString[1]);
 
         if (literatureManager.getConferenceSeriesList().getConferenceSeries(splitCutString[0]) == null) {
-            Terminal.printError("series \u0022" + splitCutString[0] + "\u0022 not found.");
+            Terminal.printError("series " + splitCutString[0] + " not found.");
             return;
         }
 

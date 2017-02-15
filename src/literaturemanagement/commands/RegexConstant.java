@@ -27,6 +27,8 @@ public interface RegexConstant {
     String PUBLICATIONS_BY = "publications by [; A-Za-zÖÜÄöäü]+";
     String IN_PROCEEDINGS = "in proceedings " + EVENT_NAME + "," + YEAR;
     String FIND_KEYWORDS = "find keywords " + KEYWORDS_WITH_COMMA;
+    String LIST_OF_KEYWORDS = "[a-z\u00f6\u00e4\u00fc]+[;a-z\u00f6\u00e4\u00fc]*";
+    String JACCARD = "jaccard " + LIST_OF_KEYWORDS + " " + LIST_OF_KEYWORDS;
 
 
 }

@@ -2,6 +2,7 @@ package literaturemanagement.lists;
 
 import literaturemanagement.MyUtil;
 
+import java.security.Key;
 import java.util.ArrayList;
 
 public class KeywordList {
@@ -38,5 +39,47 @@ public class KeywordList {
 
     public int getLength() {
         return this.keywordList.size();
+    }
+
+    public KeywordList intersection(KeywordList otherKWList) {
+        KeywordList newKWList = new KeywordList();
+        for (int i = 0; i < this.getLength(); i++) {
+            for (int j = 0; j < otherKWList.getLength(); j++) {
+                if (this.keywordList.get(i).equals(otherKWList.getAtIndex(j))) {
+                    newKWList.addKeyword(this.keywordList.get(i));
+                    break;
+                }
+
+
+            }
+
+
+        }
+
+        return newKWList;
+    }
+
+    public KeywordList union(KeywordList otherKWList) {
+        KeywordList newKWList = new KeywordList();
+        for (int i = 0; i < this.getLength(); i++) {
+            for (int j = 0; j < otherKWList.getLength(); j++) {
+                if (this.keywordList.get(i).equals(otherKWList.getAtIndex(j))) {
+                    break;
+                }
+                
+            }
+
+            newKWList.addKeyword(this.keywordList.get(i));
+            
+
+        }
+
+        for (int i = 0; i < otherKWList.getLength(); i++) {
+
+            newKWList.addKeyword(otherKWList.getAtIndex(i));
+
+        }
+
+        return newKWList;
     }
 }

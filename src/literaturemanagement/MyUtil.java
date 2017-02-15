@@ -1,9 +1,13 @@
 package literaturemanagement;
 
+import edu.kit.informatik.Terminal;
 import literaturemanagement.entities.Reference;
+import literaturemanagement.lists.KeywordList;
 
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 
 public class MyUtil {
 
@@ -54,6 +58,17 @@ public class MyUtil {
         }
 
         return false;
+
+    }
+
+    public static String jaccard(KeywordList k1, KeywordList k2) {
+        if(k1.getLength() == 0 && k2.getLength() == 0) {
+            Terminal.printLine("1.000");
+        }
+
+        double result = (k1.intersection(k2).getLength() / k1.union(k2).getLength());
+
+        return String.format(Locale.UK, "%.3f", ((int) (result * 1000) / 1000.0f));
 
     }
 
