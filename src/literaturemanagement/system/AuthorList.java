@@ -19,4 +19,14 @@ public class AuthorList {
     public ArrayList<Author> getAuthorList() {
         return authorList;
     }
+
+    public boolean contains(Author author) {
+        for (int i = 0; i < this.authorList.size(); i++) {
+            if (this.authorList.get(i).compareTo(author) == 0);
+            return true;
+
+        }
+
+        return false;
+    }
 }

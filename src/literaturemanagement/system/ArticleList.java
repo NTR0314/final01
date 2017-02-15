@@ -33,6 +33,8 @@ public class ArticleList {
     public ArrayList<String> getArticlesFrom(Author author) {
         ArrayList<String> idList = new ArrayList<>();
 
+
+
         for (int i = 0; i < this.articleList.size(); i++) {
             for (int j = 0; j < this.articleList.get(i).getAuthorList().getAuthorList().size(); j++) {
                 if (this.articleList.get(i).getAuthorList().getAtIndex(j).compareTo(author) == 0) {

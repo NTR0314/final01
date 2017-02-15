@@ -19,8 +19,21 @@ public class PublicationsBy extends Command {
         String cutString = cutString(input);
         String[] splitCutString = cutString.split(" |;");
 
+        //checking if Authors are existing in literatureManager
+        for (int i = 0; i < splitCutString.length; i+= 2) {
+            Author author = new Author(splitCutString[i], splitCutString[i + 1]);
+            for (int j = 0; j < literatureManager.getAuthorList().getAuthorList().size(); j++) {
+                if (literatureManager.getAuthorList().getAtIndex(j).compareTo(author) == 0) {
+                    break;
+                }
+
+            }
+            Terminal.printError("author " + splitCutString[i] + " " + splitCutString[i + 1] + " not found");
+
+        }
+
         for (int i = 0; i < splitCutString.length; i += 2) {
-            Author author = new Author(splitCutString[i], splitCutString[i+1]);
+            Author author = new Author(splitCutString[i], splitCutString[i + 1]);
             Terminal.printLine(literatureManager.getArticleList().getArticlesFrom(author));
 
         }
