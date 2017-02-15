@@ -30,7 +30,7 @@ public class AddArticleTo extends Command {
 
         else if(literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0]) != null) {
             literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0])
-                    .getArticles().add(articleToAdd);
+                    .getArticleArrayList().add(articleToAdd);
         }
     }
 }

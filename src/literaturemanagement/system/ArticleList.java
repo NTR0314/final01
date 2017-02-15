@@ -47,4 +47,16 @@ public class ArticleList {
 
         return idList;
     }
+
+    public void printAllInYear(int year) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getYear() == year) {
+                Terminal.printLine(this.getAtIndex(i).getIdentifier());
+            }
+        }
+    }
+
+    public ArrayList<Article> getArticleList() {
+        return articleList;
+    }
 }

@@ -24,6 +24,7 @@ public interface RegexConstant {
     String ALL_PUBLICATIONS = "all publications";
     String LIST_INVALID_PUBLICATIONS = "list invalid publications";
     String PUBLICATIONS_BY = "publications by [; A-Za-zÖÜÄöäü]+";
+    String IN_PROCEEDINGS = "in proceedings " + EVENT_NAME + "," + YEAR;
 
 
 }

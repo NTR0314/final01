@@ -1,12 +1,13 @@
 package literaturemanagement;
 
+import literaturemanagement.system.ArticleList;
 import literaturemanagement.venues.Conference;
 
 import java.util.ArrayList;
 
 public class ConferenceSeries {
     private ArrayList<Conference> conferences;
-    private ArrayList<Article> articles;
+    private ArticleList articles;
     private final String name;
     private ArrayList<String> keywords;
 
@@ -18,7 +19,11 @@ public class ConferenceSeries {
         return name;
     }
 
-    public ArrayList<Article> getArticles() {
+    public ArrayList<Article> getArticleArrayList() {
+        return this.articles.getArticleList();
+    }
+
+    public ArticleList getArticles() {
         return articles;
     }
 }
