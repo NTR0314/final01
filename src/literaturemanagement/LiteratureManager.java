@@ -2,9 +2,7 @@ package literaturemanagement;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.commands.CommandArray;
-import literaturemanagement.system.*;
-
-import java.util.ArrayList;
+import literaturemanagement.lists.*;
 
 public class LiteratureManager {
     private boolean programFlow = true;

@@ -1,6 +1,4 @@
-package literaturemanagement.venues;
-
-import literaturemanagement.Article;
+package literaturemanagement.entities;
 
 import java.util.ArrayList;
 

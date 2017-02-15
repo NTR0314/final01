@@ -11,7 +11,8 @@ public interface RegexConstant {
     String ENTITIY = "(pub|journal|series)" +
             " ([a-z\u00e4\u00fc\u00f6]+[0-9]+|([A-Za-z\u00e4\u00fc\u00f6\u00c4\u00dc\u00d6])+)";
     String QUIT = "quit";
-    String KEYWORDS = "[a-z]+(;?[a-z])*";
+    String KEYWORDS_WITH_SEMICOLON = "[a-z]+(;?[a-z])*";
+    String KEYWORDS_WITH_COMMA = "[a-z]+(,?[a-z])*";
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + EVENT_NAME;
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
@@ -20,11 +21,12 @@ public interface RegexConstant {
             YEAR + "," + TITLE;
     String WRITTEN_BY = "written-by " + PUBLICATION_IDENTIFIER + "," + AUTHORS;
     String CITES = "cites " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
-    String ADD_KEYWORDS_TO = "add keywords to " + ENTITIY + ":" + KEYWORDS;
+    String ADD_KEYWORDS_TO = "add keywords to " + ENTITIY + ":" + KEYWORDS_WITH_SEMICOLON;
     String ALL_PUBLICATIONS = "all publications";
     String LIST_INVALID_PUBLICATIONS = "list invalid publications";
     String PUBLICATIONS_BY = "publications by [; A-Za-zÖÜÄöäü]+";
     String IN_PROCEEDINGS = "in proceedings " + EVENT_NAME + "," + YEAR;
+    String FIND_KEYWORDS = "find keywords " + KEYWORDS_WITH_COMMA;
 
 
 }

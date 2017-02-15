@@ -1,6 +1,6 @@
 package literaturemanagement.commands;
 
-import literaturemanagement.Author;
+import literaturemanagement.entities.Author;
 import literaturemanagement.LiteratureManager;
 
 public class WrittenBy extends Command {

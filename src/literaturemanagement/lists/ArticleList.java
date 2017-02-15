@@ -1,8 +1,8 @@
-package literaturemanagement.system;
+package literaturemanagement.lists;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.Article;
-import literaturemanagement.Author;
+import literaturemanagement.entities.Article;
+import literaturemanagement.entities.Author;
 
 import java.util.ArrayList;
 
@@ -48,6 +48,17 @@ public class ArticleList {
         return idList;
     }
 
+    public void add(Article article) {
+        this.articleList.add(article);
+    }
+
+    public void add(ArticleList articleList) {
+        for (int i = 0; i < articleList.getLength(); i++) {
+            this.add(articleList.getAtIndex(i));
+
+        }
+    }
+
     public void printAllInYear(int year) {
         for (int i = 0; i < this.getLength(); i++) {
             if (this.getAtIndex(i).getYear() == year) {
@@ -58,5 +69,43 @@ public class ArticleList {
 
     public ArrayList<Article> getArticleList() {
         return articleList;
+    }
+
+    public ArticleList getWithKeyword(String keyword) {
+        ArticleList newArticleListContainingKeywords = new ArticleList();
+
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.articleList.get(i).getKeywordList().contains(keyword)) {
+                newArticleListContainingKeywords.add(this.articleList.get(i));
+            }
+
+        }
+
+        return newArticleListContainingKeywords;
+    }
+
+    public ArticleList getWithKeywords(KeywordList keywordList) {
+        ArticleList newArticleListContainingKeywords = new ArticleList();
+
+        for (int i = 0; i < keywordList.getLength(); i++) {
+            newArticleListContainingKeywords.add(getWithKeyword(keywordList.getAtIndex(i)));
+        }
+
+        return newArticleListContainingKeywords;
+    }
+
+    public String toString() {
+        if (this.getLength() == 0) {
+            return "";
+        }
+
+        String tempString = this.getAtIndex(0).toString();
+
+        for (int i = 1; i < this.getLength(); i++) {
+            tempString = tempString + "\n" + this.getAtIndex(i).toString();
+
+        }
+
+        return tempString;
     }
 }

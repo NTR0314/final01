@@ -2,7 +2,7 @@ package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
-import literaturemanagement.venues.Conference;
+import literaturemanagement.entities.Conference;
 
 public class AddConference extends Command{
     protected AddConference() {

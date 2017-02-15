@@ -1,7 +1,7 @@
 package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.ConferenceSeries;
+import literaturemanagement.entities.ConferenceSeries;
 import literaturemanagement.LiteratureManager;
 
 public class AddConferenceSeries extends Command{

@@ -1,15 +1,17 @@
-package literaturemanagement;
+package literaturemanagement.entities;
 
-import literaturemanagement.system.ArticleList;
-import literaturemanagement.venues.Conference;
+import literaturemanagement.entities.Article;
+import literaturemanagement.lists.ArticleList;
+import literaturemanagement.lists.ConferenceList;
+import literaturemanagement.lists.KeywordList;
 
 import java.util.ArrayList;
 
 public class ConferenceSeries {
-    private ArrayList<Conference> conferences;
-    private ArticleList articles;
+    private ConferenceList conferences = new ConferenceList();
+    private ArticleList articles = new ArticleList();
     private final String name;
-    private ArrayList<String> keywords;
+    private KeywordList keywords = new KeywordList();
 
     public ConferenceSeries(String name) {
         this.name = name;

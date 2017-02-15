@@ -1,7 +1,9 @@
-package literaturemanagement;
+package literaturemanagement.entities;
 
 //TODO vllt brauch ich die Klasse garnicht lol evtl zum sortieren die Methode ung so
 //TODO ok ich brauch nur wegen sortirung hab schon anders gelöst LANM
+
+import literaturemanagement.MyUtil;
 
 public class Reference implements Comparable<Reference> {
     private Article article;

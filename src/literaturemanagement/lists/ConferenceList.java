@@ -1,6 +1,6 @@
-package literaturemanagement.system;
+package literaturemanagement.lists;
 
-import literaturemanagement.venues.Conference;
+import literaturemanagement.entities.Conference;
 
 import java.util.ArrayList;
 

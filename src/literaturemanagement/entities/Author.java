@@ -1,4 +1,4 @@
-package literaturemanagement;
+package literaturemanagement.entities;
 
 public class Author implements Comparable<Author> {
     private final String name;

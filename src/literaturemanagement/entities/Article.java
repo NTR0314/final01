@@ -1,7 +1,7 @@
-package literaturemanagement;
+package literaturemanagement.entities;
 
-import literaturemanagement.system.AuthorList;
-import literaturemanagement.system.KeywordList;
+import literaturemanagement.lists.AuthorList;
+import literaturemanagement.lists.KeywordList;
 
 import java.util.ArrayList;
 
@@ -46,5 +46,10 @@ public class Article {
 
     public int getYear() {
         return year;
+    }
+
+    @Override
+    public String toString() {
+        return identifier;
     }
 }

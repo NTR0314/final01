@@ -1,6 +1,6 @@
 package literaturemanagement.commands;
 
-import literaturemanagement.Article;
+import literaturemanagement.entities.Article;
 import literaturemanagement.LiteratureManager;
 
 public class AddArticleTo extends Command {

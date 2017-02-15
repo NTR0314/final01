@@ -1,7 +1,7 @@
-package literaturemanagement.system;
+package literaturemanagement.lists;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.ConferenceSeries;
+import literaturemanagement.entities.ConferenceSeries;
 
 import java.util.ArrayList;
 

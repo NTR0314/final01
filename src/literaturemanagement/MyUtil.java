@@ -1,5 +1,7 @@
 package literaturemanagement;
 
+import literaturemanagement.entities.Reference;
+
 import java.util.ArrayList;
 import java.util.Collections;
 

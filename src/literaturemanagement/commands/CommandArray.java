@@ -17,7 +17,8 @@ public class CommandArray {
             new AllPublications(),
             new ListInvalidPublications(),
             new PublicationsBy(),
-            new InProceedings()
+            new InProceedings(),
+            new FindKeywords()
 
     };
 }

@@ -2,7 +2,7 @@ package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
-import literaturemanagement.venues.Journal;
+import literaturemanagement.entities.Journal;
 
 public class AddJournal extends Command{
     protected AddJournal() {

@@ -1,7 +1,7 @@
 package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.Article;
+import literaturemanagement.entities.Article;
 import literaturemanagement.LiteratureManager;
 
 public class Cites extends Command {

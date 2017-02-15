@@ -1,7 +1,7 @@
-package literaturemanagement.system;
+package literaturemanagement.lists;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.venues.Journal;
+import literaturemanagement.entities.Journal;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
 package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.Author;
+import literaturemanagement.entities.Author;
 import literaturemanagement.LiteratureManager;
 
 public class PublicationsBy extends Command {
