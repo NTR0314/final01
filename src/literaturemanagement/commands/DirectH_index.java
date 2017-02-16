@@ -6,7 +6,7 @@ import literaturemanagement.MyUtil;
 
 public class DirectH_index extends Command {
     protected DirectH_index() {
-        super(RegexConstant.LIST_OF_CITATION_COUNTS);
+        super(RegexConstant.DIRCET_H_INDEX);
     }
 
     @Override

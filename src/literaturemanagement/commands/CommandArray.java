@@ -21,7 +21,8 @@ public class CommandArray {
             new FindKeywords(),
             new Jaccard(),
             new Similarity(),
-            new DirectH_index()
+            new DirectH_index(),
+            new H_index()
 
     };
 }

@@ -108,4 +108,28 @@ public class ArticleList {
 
         return tempString;
     }
+
+    public ArticleList getByAuthor(Author author) {
+        ArticleList newAL = new ArticleList();
+
+        for (int i = 0; i < this.getLength(); i++) {
+            if(this.getAtIndex(i).getAuthorList().contains(author)) {
+                newAL.add(this.getAtIndex(i));
+            }
+
+        }
+
+        return newAL;
+    }
+
+    public boolean contains(Article article) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getIdentifier().equals(article.getIdentifier())) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
 }

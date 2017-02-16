@@ -2,6 +2,7 @@ package literaturemanagement.entities;
 
 import literaturemanagement.lists.AuthorList;
 import literaturemanagement.lists.KeywordList;
+import literaturemanagement.lists.ReferenceList;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ public class Article {
     private final String title;
     private final int year;
     private AuthorList authorList = new AuthorList();
-    private ArrayList<Article> references = new ArrayList<>();
+    private ReferenceList references = new ReferenceList();
     private KeywordList keywordList = new KeywordList();
 
 
@@ -29,7 +30,7 @@ public class Article {
     }
 
     public ArrayList<Article> getReferences() {
-        return references;
+        return references.getArticleList().getArticleList();
     }
 
     public KeywordList getKeywordList() {

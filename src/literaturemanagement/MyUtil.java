@@ -1,12 +1,9 @@
 package literaturemanagement;
 
 import edu.kit.informatik.Terminal;
-import literaturemanagement.entities.Reference;
 import literaturemanagement.lists.KeywordList;
 
-import java.security.Key;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Locale;
 
 public class MyUtil {
@@ -31,18 +28,6 @@ public class MyUtil {
         } else return a.size();
 
 
-    }
-
-    public static void sortReferenceArrayList(ArrayList<Reference> references) {
-        for (int i = 0; i < references.size(); i++) {
-            for (int j = 0; j < references.size(); j++) {
-                if (references.get(j).compareTo(references.get(j + 1)) > 0) {
-                    Collections.swap(references, j, j + 1);
-                    break;
-                }
-
-            }
-        }
     }
 
     /**
