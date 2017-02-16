@@ -9,11 +9,8 @@ import java.util.regex.Pattern;
 public class Test {
     public static void main(String[] args) {
 
-        double test = (double)58/7;
+        String[] test = {"8","6","8","4","8","6"};
 
-        String test2 = String.format(Locale.UK, "%.3f", ((int) (test * 1000) / 1000.0f));
-
-        System.out.println(test);
-        System.out.println(test2);
+        System.out.println(MyUtil.hIndex(MyUtil.stringToIntArray(test)));
     }
 }

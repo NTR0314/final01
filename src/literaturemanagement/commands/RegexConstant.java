@@ -30,6 +30,8 @@ public interface RegexConstant {
     String LIST_OF_KEYWORDS = "[a-z\u00f6\u00e4\u00fc]+[;a-z\u00f6\u00e4\u00fc]*";
     String JACCARD = "jaccard " + LIST_OF_KEYWORDS + " " + LIST_OF_KEYWORDS;
     String SIMILARITY = "similarity " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
+    String LIST_OF_CITATION_COUNTS = "[0-9]+(;[0-9]+)*";
+    String DIRCET_H_INDEX = "direct h-index " + LIST_OF_CITATION_COUNTS;
 
 
 }

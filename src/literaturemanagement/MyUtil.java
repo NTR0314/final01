@@ -76,4 +76,40 @@ public class MyUtil {
 
     }
 
+    public static int hIndex(int[] citationCounts) {
+        int hIndex = 0;
+
+        for (int i = 1; i <= citationCounts.length; i++) {
+            int hIndexHelper = 0;
+
+            for (int j = 0; j < citationCounts.length; j++) {
+                if (i <= citationCounts[j]) {
+                    hIndexHelper++;
+                }
+
+                if (hIndexHelper >= i) {
+                    hIndex++;
+                    break;
+                }
+
+
+            }
+
+        }
+
+        return hIndex;
+
+    }
+
+    public static int[] stringToIntArray(String[] sA) {
+        int[] iA = new int[sA.length];
+
+        for (int i = 0; i < sA.length; i++) {
+            iA[i] = Integer.parseInt(sA[i]);
+
+        }
+
+        return iA;
+    }
+
 }

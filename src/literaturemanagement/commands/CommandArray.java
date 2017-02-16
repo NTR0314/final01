@@ -20,7 +20,8 @@ public class CommandArray {
             new InProceedings(),
             new FindKeywords(),
             new Jaccard(),
-            new Similarity()
+            new Similarity(),
+            new DirectH_index()
 
     };
 }
