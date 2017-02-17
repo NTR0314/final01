@@ -23,7 +23,8 @@ public class CommandArray {
             new Similarity(),
             new DirectH_index(),
             new H_index(),
-            new CoauthorsOf()
+            new CoauthorsOf(),
+            new ForeignCitationsOf()
 
     };
 }

@@ -132,4 +132,61 @@ public class ArticleList {
 
         return false;
     }
+
+    public ArticleList notWrittenBy(Author author) {
+        ArticleList newArticleList = new ArticleList();
+        for (int i = 0; i < this.getLength(); i++) {
+            if (!this.getAtIndex(i).getAuthorList().contains(author)) {
+                newArticleList.add(this.getAtIndex(i));
+            }
+
+        }
+
+        return newArticleList;
+    }
+
+    public ArticleList notWrittenBy(AuthorList authorList) {
+        ArticleList newArticleList = this;
+        for (int i = 0; i < authorList.getLength(); i++) {
+            newArticleList = newArticleList.notWrittenBy(authorList.getAtIndex(i));
+
+        }
+
+        return newArticleList;
+    }
+
+    public ArticleList hasReferenceOn(Article article) {
+        ArticleList newArticleList = new ArticleList();
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getReferences().contains(article)) {
+                newArticleList.add(this.getAtIndex(i));
+
+            }
+
+        }
+
+        return newArticleList;
+    }
+
+    public ArticleList addWithoutDuplicates(ArticleList articleList) {
+        ArticleList newArticleList = this;
+        for (int i = 0; i < newArticleList.getLength(); i++) {
+            if (!this.contains(articleList.getAtIndex(i))) {
+                newArticleList.add(articleList.getAtIndex(i));
+            }
+
+        }
+
+        return newArticleList;
+    }
+
+    public ArticleList hasReferenceOn(ArticleList articleList) {
+        ArticleList newArticleList = new ArticleList();
+        for (int i = 0; i < articleList.getLength(); i++) {
+            newArticleList = newArticleList.addWithoutDuplicates(this.hasReferenceOn(articleList.getAtIndex(i)));
+
+        }
+
+        return newArticleList;
+    }
 }

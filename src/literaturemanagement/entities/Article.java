@@ -1,10 +1,9 @@
 package literaturemanagement.entities;
 
+import literaturemanagement.lists.ArticleList;
 import literaturemanagement.lists.AuthorList;
 import literaturemanagement.lists.KeywordList;
 import literaturemanagement.lists.ReferenceList;
-
-import java.util.ArrayList;
 
 public class Article {
     private final String identifier; //besteht aus kleinbuchstaben udn Zahlen
@@ -29,8 +28,8 @@ public class Article {
         return identifier;
     }
 
-    public ArrayList<Article> getReferences() {
-        return references.getArticleList().getArticleList();
+    public ArticleList getReferences() {
+        return references.getArticleList();
     }
 
     public KeywordList getKeywordList() {

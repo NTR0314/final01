@@ -6,14 +6,14 @@ import literaturemanagement.entities.Author;
 import literaturemanagement.lists.ArticleList;
 import literaturemanagement.lists.AuthorList;
 
-public class CoauthorsOf extends Command {
-    protected CoauthorsOf() {
-        super(RegexConstant.COAUTHORS_OF);
+public class ForeignCitationsOf extends Command {
+    protected ForeignCitationsOf() {
+        super(RegexConstant.FOREIGN_CITATIONS_OF);
     }
 
     @Override
     public String cutString(String input) {
-        return cutStringHelper(input, 2);
+        return cutStringHelper(input,3);
     }
 
     @Override
@@ -22,10 +22,10 @@ public class CoauthorsOf extends Command {
 
         String[] splitCutString = cutString.split(" ");
 
-        String preName = splitCutString[0];
+        String firstName = splitCutString[0];
         String lastName = splitCutString[1];
 
-        Author ourAuthor = new Author(preName, lastName);
+        Author ourAuthor = new Author(firstName, lastName);
 
         if (!literatureManager.getAuthorList().contains(ourAuthor)) {
             Terminal.printError("Author not found");
@@ -45,11 +45,18 @@ public class CoauthorsOf extends Command {
             }
 
         }
+        // added the author himself
+        coAuthors.addAuthor(ourAuthor);
 
-        for (int i = 0; i < coAuthors.getLength(); i++) {
-            Terminal.printLine(coAuthors.getAtIndex(i).toString());
+        ArticleList notWrittenByCoAuthors = literatureManager.getArticleList().notWrittenBy(coAuthors);
+
+        ArticleList hasReferenceOnArticlesByAuthor = notWrittenByCoAuthors.hasReferenceOn(articleByAuthor);
+
+        for (int i = 0; i < hasReferenceOnArticlesByAuthor.getLength(); i++) {
+            Terminal.printLine(hasReferenceOnArticlesByAuthor.getAtIndex(i).getIdentifier());
 
         }
+
 
     }
 }

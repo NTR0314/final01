@@ -34,6 +34,7 @@ public interface RegexConstant {
     String DIRCET_H_INDEX = "direct h-index " + LIST_OF_CITATION_COUNTS;
     String H_INDEX = "h-index " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
     String COAUTHORS_OF = "coauthors of " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
+    String FOREIGN_CITATIONS_OF = "foreign citations of ";
 
 
 }
