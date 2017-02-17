@@ -19,4 +19,9 @@ public class Author implements Comparable<Author> {
 
         else return this.name.compareTo(o.name);
     }
+
+    @Override
+    public String toString() {
+        return name + " " + lastName;
+    }
 }

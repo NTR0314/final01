@@ -29,4 +29,8 @@ public class AuthorList {
 
         return false;
     }
+
+    public int getLength() {
+        return this.authorList.size();
+    }
 }

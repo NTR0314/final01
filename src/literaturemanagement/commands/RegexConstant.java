@@ -32,7 +32,8 @@ public interface RegexConstant {
     String SIMILARITY = "similarity " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
     String LIST_OF_CITATION_COUNTS = "[0-9]+(;[0-9]+)*";
     String DIRCET_H_INDEX = "direct h-index " + LIST_OF_CITATION_COUNTS;
-    String H_INDEX = "h-index " + PERSON_CITY_NAME + PERSON_CITY_NAME;
+    String H_INDEX = "h-index " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
+    String COAUTHORS_OF = "coauthors of " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
 
 
 }
