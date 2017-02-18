@@ -20,7 +20,7 @@ public class PublicationsBy extends Command {
         String[] splitCutString = cutString.split(" |;");
 
         //checking if Authors are existing in literatureManager
-        for (int i = 0; i < splitCutString.length; i+= 2) {
+        for (int i = 0; i < splitCutString.length; i += 2) {
             Author author = new Author(splitCutString[i], splitCutString[i + 1]);
             for (int j = 0; j < literatureManager.getAuthorList().getAuthorList().size(); j++) {
                 if (literatureManager.getAuthorList().getAtIndex(j).compareTo(author) == 0) {
@@ -34,8 +34,10 @@ public class PublicationsBy extends Command {
 
         for (int i = 0; i < splitCutString.length; i += 2) {
             Author author = new Author(splitCutString[i], splitCutString[i + 1]);
-            Terminal.printLine(literatureManager.getArticleList().getArticlesFrom(author));
+            for (int j = 0; j < literatureManager.getArticleList().getArticlesFrom(author).size(); j++) {
+                Terminal.printLine(literatureManager.getArticleList().getArticlesFrom(author).get(j));
 
+            }
         }
 
     }

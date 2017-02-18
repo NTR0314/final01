@@ -2,9 +2,10 @@ package literaturemanagement.commands;
 
 public interface RegexConstant {
 
+    String NO_PUNCTATION = "[^:;,]+";
     String EVENT_NAME = "([A-Za-z\u00e4\u00fc\u00f6\u00c4\u00dc\u00d6])+";
     String PUBLICATION_IDENTIFIER = "[a-z\u00e4\u00fc\u00f6]+[0-9]+";
-    String PERSON_CITY_NAME = "[A-Z\u00c4\u00d6\u00dc][a-z\u00fc\u00e4\u00f6]+";
+    String PERSON_CITY_NAME = "[A-Z\u00c4\u00d6\u00dca-z\u00fc\u00e4\u00f6]+";
     String YEAR = "\\d\\d\\d\\d";
     String TITLE = "[ A-Za-z\u00d6\u00dc\u00c4\u00f6\u00e4\u00fc]+";
     String AUTHORS = "[; A-Za-z\u00d6\u00dc\u00c4\u00f6\u00e4\u00fc]+";
@@ -14,7 +15,7 @@ public interface RegexConstant {
     String KEYWORDS_WITH_SEMICOLON = "[a-z]+(;?[a-z])*";
     String KEYWORDS_WITH_COMMA = "[a-z]+(,?[a-z])*";
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
-    String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + EVENT_NAME;
+    String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + NO_PUNCTATION;
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
     String ADD_CONFERENCE = "add conference " + EVENT_NAME + "," + YEAR + "," + PERSON_CITY_NAME;
     String ADD_ARTICLE_TOO = "add article to (series|journal) " + EVENT_NAME + ":" + PUBLICATION_IDENTIFIER + "," +

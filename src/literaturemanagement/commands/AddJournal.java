@@ -21,6 +21,11 @@ public class AddJournal extends Command{
 
         Journal journalToAdd = new Journal(splitCuttedInput[0], splitCuttedInput[1]);
 
+        if (literatureManager.getJournalList().contains(journalToAdd)) {
+            Terminal.printError("Journal is already published");
+            return;
+        }
+
         literatureManager.getJournalList().addJournal(journalToAdd);
 
         Terminal.printLine("Ok");

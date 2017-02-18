@@ -22,6 +22,7 @@ public class AddKeywordsTo extends Command {
         String nameOrId = splitCutInput[1];
         // alles danach sind Keywörter
 
+        //nullptr exception hier ka wieso
         if (entityType.equals("pub")) {
             for (int i = 2; i < splitCutInput.length; i++) {
 
