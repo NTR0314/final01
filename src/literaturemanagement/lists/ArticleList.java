@@ -27,10 +27,8 @@ public class ArticleList {
     }
 
 
-
     public ArrayList<String> getArticlesFrom(Author author) {
         ArrayList<String> idList = new ArrayList<>();
-
 
 
         for (int i = 0; i < this.articleList.size(); i++) {
@@ -41,6 +39,19 @@ public class ArticleList {
 
             }
 
+        }
+
+        return idList;
+    }
+
+    public ArrayList<String> getArticlesFrom(AuthorList authorList) {
+        ArrayList<String> idList = new ArrayList<>();
+        for (int i = 0; i < authorList.getLength(); i++) {
+            for (int j = 0; j < this.getArticlesFrom(authorList.getAtIndex(i)).size(); j++) {
+                if (!idList.contains(this.getArticlesFrom(authorList.getAtIndex(i)).get(j))) {
+                    idList.add(this.getArticlesFrom(authorList.getAtIndex(i)).get(j));
+                }
+            }
         }
 
         return idList;
@@ -111,7 +122,7 @@ public class ArticleList {
         ArticleList newAL = new ArticleList();
 
         for (int i = 0; i < this.getLength(); i++) {
-            if(this.getAtIndex(i).getAuthorList().contains(author)) {
+            if (this.getAtIndex(i).getAuthorList().contains(author)) {
                 newAL.add(this.getAtIndex(i));
             }
 

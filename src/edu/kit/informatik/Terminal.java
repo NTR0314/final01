@@ -425,49 +425,49 @@ public class Terminal {
         tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
                 "Ok" // article added after keywords, keywords should still be inherited
               });
-//
-//        // all publications
-//        tests.put("all publications", new String[] {
-//                "rr2016",
-//                "rr2017",
-//                "rv2016",
-//                "mvp2015",
-//                "mvp2016",
-//                "mvp2017",
-//                "abc2016",
-//                "p0",
-//                "p1",
-//                "p2",
-//                "p3"
-//              });
-//
-//        // list invalid publications
-//        tests.put("list invalid publications", new String[] {
-//                "rr2016",
-//                "rv2016",
-//                "abc2016",
-//                "mvp2017"
-//              });
-//
-//        // publications by
-//        tests.put("publications by Eniola Lowry", new String[] {
-//                "rr2017"
-//              });
-//        tests.put("publications by Eniola Lowry;Richard Rhinelander", new String[] {
-//                "rr2017",
-//                "mvp2016"
-//              });
-//        tests.put("publications by Shashi Afolabi;eniola Lowry", new String[] {
-//                "rr2017",
-//                "mvp2015",
-//                "mvp2016"
-//              });
-//        tests.put("publications by Eniola Lowry;and me", new String[] {
-//                "Error,"
-//              });
-//        tests.put("publications by test author", new String[] {
-//                "Error,"
-//              });
+
+        // all publications
+        tests.put("all publications", new String[] {
+                "rr2016",
+                "rr2017",
+                "rv2016",
+                "mvp2015",
+                "mvp2016",
+                "mvp2017",
+                "abc2016",
+                "p0",
+                "p1",
+                "p2",
+                "p3"
+              });
+
+        // list invalid publications
+        tests.put("list invalid publications", new String[] {
+                "rr2016",
+                "rv2016",
+                "abc2016",
+                "mvp2017"
+              });
+
+        // publications by
+        tests.put("publications by Eniola Lowry", new String[] {
+                "rr2017"
+              });
+        tests.put("publications by Eniola Lowry;Richard Rhinelander", new String[] {
+                "rr2017",
+                "mvp2016"
+              });
+        tests.put("publications by Shashi Afolabi;eniola Lowry", new String[] {
+                "rr2017",
+                "mvp2015",
+                "mvp2016"
+              });
+        tests.put("publications by Eniola Lowry;and me", new String[] {
+                "Error,"
+              });
+        tests.put("publications by test author", new String[] {
+                "Error,"
+              });
 //
 //        // in proceedings
 //        tests.put("in proceedings ICSA,2016", new String[] {
