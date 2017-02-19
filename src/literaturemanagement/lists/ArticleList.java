@@ -11,12 +11,10 @@ public class ArticleList {
 
     public Article getArticle(String identifier) {
         for (int i = 0; i < this.articleList.size(); i++) {
-            if (this.articleList.get(i).getIdentifier() == identifier) {
+            if (this.articleList.get(i).getIdentifier().equals(identifier)) {
                 return this.articleList.get(i);
             }
         }
-
-        Terminal.printError("Article not found");
         return null;
     }
 

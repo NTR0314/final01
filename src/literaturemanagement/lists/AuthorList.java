@@ -22,11 +22,11 @@ public class AuthorList {
 
     public boolean contains(Author author) {
         for (int i = 0; i < this.authorList.size(); i++) {
-            if (this.authorList.get(i).compareTo(author) == 0);
-            return true;
+            if (this.authorList.get(i).getIdentifier().equals(author.getIdentifier())) {
+                return true;
 
+            }
         }
-
         return false;
     }
 

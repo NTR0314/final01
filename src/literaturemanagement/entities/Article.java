@@ -52,4 +52,15 @@ public class Article {
     public String toString() {
         return identifier;
     }
+
+    public boolean contains(Author author) {
+        for (int i = 0; i < this.authorList.getLength(); i++) {
+            if (this.authorList.getAtIndex(i).getIdentifier().equals(author.getIdentifier())) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
 }

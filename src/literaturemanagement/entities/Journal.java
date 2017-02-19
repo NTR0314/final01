@@ -1,14 +1,12 @@
 package literaturemanagement.entities;
 
-import java.util.ArrayList;
+import literaturemanagement.lists.ArticleList;
 
 public class Journal {
 
     private final String name;
-
     private final String publisher;
-
-    private ArrayList<Article> articles = new ArrayList<>();
+    private ArticleList articles = new ArticleList();
 
     public Journal(String name, String publisher) {
         this.name = name;
@@ -19,7 +17,11 @@ public class Journal {
         return name;
     }
 
-    public ArrayList<Article> getArticles() {
-        return articles;
+    public boolean contains(String id) {
+        return this.articles.contains(id);
+    }
+
+    public void add(Article article) {
+        this.articles.add(article);
     }
 }

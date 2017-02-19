@@ -302,49 +302,49 @@ public class Terminal {
                 "Ok"
               });
         
-//        // written-by
-//        tests.put("written-by rr2017,Richard Rhinelander", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by rr2017,Richard Rhinelander;Eniola Lowry", new String[] {
-//                "Error,"
-//              });
-//        tests.put("written-by rr2017,Eniola Lowry", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by rr2018,Richard Rhinelander", new String[] {
-//                "Error,"
-//              });
-//        tests.put("written-by rr2017,eniola Lowry", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by mvp2015,Shashi Afolabi", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by mvp2016,Richard Rhinelander;Shashi Afolabi", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by rr2017,Test Author", new String[] {
-//                "Error,"
-//              });
-//        tests.put("written-by rr2017,Eniola Rhinelander,", new String[] {
-//                "Error,"
-//              });
-//        tests.put("written-by rr2017,Eniola Rhinelander,shashi afolabi", new String[] {
-//                "Error,"
-//              });
-//        tests.put("written-by p0,a a", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by p1,a a;b b", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by p2,b b;c c", new String[] {
-//                "Ok"
-//              });
-//        tests.put("written-by p3,c c;d d", new String[] {
-//                "Ok"
-//              });
+        // written-by
+        tests.put("written-by rr2017,Richard Rhinelander", new String[] {
+                "Ok"
+              });
+        tests.put("written-by rr2017,Richard Rhinelander;Eniola Lowry", new String[] {
+                "Error,"
+              });
+        tests.put("written-by rr2017,Eniola Lowry", new String[] {
+                "Ok"
+              });
+        tests.put("written-by rr2018,Richard Rhinelander", new String[] {
+                "Error,"
+              });
+        tests.put("written-by rr2017,eniola Lowry", new String[] {
+                "Ok"
+              });
+        tests.put("written-by mvp2015,Shashi Afolabi", new String[] {
+                "Ok"
+              });
+        tests.put("written-by mvp2016,Richard Rhinelander;Shashi Afolabi", new String[] {
+                "Ok"
+              });
+        tests.put("written-by rr2017,Test Author", new String[] {
+                "Error,"
+              });
+        tests.put("written-by rr2017,Eniola Rhinelander,", new String[] {
+                "Error,"
+              });
+        tests.put("written-by rr2017,Eniola Rhinelander,shashi afolabi", new String[] {
+                "Error,"
+              });
+        tests.put("written-by p0,a a", new String[] {
+                "Ok"
+              });
+        tests.put("written-by p1,a a;b b", new String[] {
+                "Ok"
+              });
+        tests.put("written-by p2,b b;c c", new String[] {
+                "Ok"
+              });
+        tests.put("written-by p3,c c;d d", new String[] {
+                "Ok"
+              });
 //
 //        // cites
 //        tests.put("cites rr2017,rr2016", new String[] {

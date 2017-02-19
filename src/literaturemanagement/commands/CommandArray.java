@@ -24,7 +24,8 @@ public class CommandArray {
             new DirectH_index(),
             new H_index(),
             new CoauthorsOf(),
-            new ForeignCitationsOf()
+            new ForeignCitationsOf(),
+            new AddArticleToJournal()
 
     };
 }

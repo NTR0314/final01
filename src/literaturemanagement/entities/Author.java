@@ -24,4 +24,16 @@ public class Author implements Comparable<Author> {
     public String toString() {
         return name + " " + lastName;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }

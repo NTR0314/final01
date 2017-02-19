@@ -44,6 +44,7 @@ public class AddArticleToSeries extends Command {
             literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0])
                     .add(literatureManager.getConferenceList().getWithSeriesName(seriesName));
             literatureManager.getConferenceList().getWithSeriesName(seriesName).add(articleToAdd);
+            literatureManager.getArticleList().add(articleToAdd);
         }
 
         Terminal.printLine("Ok");
