@@ -21,4 +21,34 @@ public class ConferenceSeriesList {
         Terminal.printError("ConferenceSeries not found");
         return null;
     }
+
+    public int getLength() {
+        return this.conferenceSeriesList.size();
+    }
+
+    public boolean contains(ConferenceSeries conferenceSeries) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getName().equals(conferenceSeries.getName())) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
+    public boolean contains(String conferenceSeriesName) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getName().equals(conferenceSeriesName)) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
+    public ConferenceSeries getAtIndex(int index) {
+        return this.conferenceSeriesList.get(index);
+    }
 }

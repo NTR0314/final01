@@ -19,8 +19,25 @@ public class AddConference extends Command{
         String cutInput = cutString(input);
         String[] splittedCuttedInput = cutInput.split(",");
 
-        literatureManager.getConferenceList().addConference(new Conference(splittedCuttedInput[0],
+        if (Integer.parseInt(splittedCuttedInput[1]) < 1000) {
+            Terminal.printError("Year is to low!");
+            return;
+        }
+
+        Conference conferenceToAdd = (new Conference(splittedCuttedInput[0],
                 Integer.parseInt(splittedCuttedInput[1]), splittedCuttedInput[2]));
+
+        if (literatureManager.getConferenceList().contains(conferenceToAdd)) {
+            Terminal.printError("Conference already existing!");
+            return;
+        }
+
+        if (!literatureManager.getConferenceSeriesList().contains(conferenceToAdd.getSeriesName())) {
+            Terminal.printError("Conferenceseries is not existing!");
+            return;
+        }
+
+        literatureManager.getConferenceList().addConference(conferenceToAdd);
 
         Terminal.printLine("Ok");
 

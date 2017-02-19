@@ -17,7 +17,7 @@ public interface RegexConstant {
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + NO_PUNCTATION;
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
-    String ADD_CONFERENCE = "add conference " + EVENT_NAME + "," + YEAR + "," + PERSON_CITY_NAME;
+    String ADD_CONFERENCE = "add conference " + EVENT_NAME + "," + YEAR + "," + NO_PUNCTATION;
     String ADD_ARTICLE_TOO = "add article to (series|journal) " + EVENT_NAME + ":" + PUBLICATION_IDENTIFIER + "," +
             YEAR + "," + TITLE;
     String WRITTEN_BY = "written-by " + PUBLICATION_IDENTIFIER + "," + AUTHORS;

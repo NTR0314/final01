@@ -36,6 +36,17 @@ public class JournalList {
         return false;
     }
 
+    public boolean contains(String name) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getName().equals(name)) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
     public int getLength() {
         return this.journalList.size();
     }

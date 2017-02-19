@@ -15,5 +15,11 @@ public class Conference {
         this.location = location;
     }
 
+    public String getSeriesName() {
+        return seriesName;
+    }
 
+    public int getYear() {
+        return year;
+    }
 }
