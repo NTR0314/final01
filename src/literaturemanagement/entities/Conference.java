@@ -40,4 +40,12 @@ public class Conference {
             this.articles.getAtIndex(i).addKeyword(keyword);
         }
     }
+
+    public ArticleList getArticles() {
+        return articles;
+    }
+
+    public ArticleList getAtYear(int year) {
+        return this.articles.getAllInYear(year);
+    }
 }

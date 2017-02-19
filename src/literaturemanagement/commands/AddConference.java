@@ -17,15 +17,17 @@ public class AddConference extends Command{
     @Override
     public void execute(LiteratureManager literatureManager, String input) {
         String cutInput = cutString(input);
-        String[] splittedCuttedInput = cutInput.split(",");
+        String[] splitCutInput = cutInput.split(",");
 
-        if (Integer.parseInt(splittedCuttedInput[1]) < 1000) {
+        String seriesName = splitCutInput[0];
+
+        if (Integer.parseInt(splitCutInput[1]) < 1000) {
             Terminal.printError("Year is to low!");
             return;
         }
 
-        Conference conferenceToAdd = (new Conference(splittedCuttedInput[0],
-                Integer.parseInt(splittedCuttedInput[1]), splittedCuttedInput[2]));
+        Conference conferenceToAdd = (new Conference(splitCutInput[0],
+                Integer.parseInt(splitCutInput[1]), splitCutInput[2]));
 
         if (literatureManager.getConferenceList().containsAtYear(conferenceToAdd)) {
             Terminal.printError("Conference already existing!");
@@ -38,6 +40,7 @@ public class AddConference extends Command{
         }
 
         literatureManager.getConferenceList().addConference(conferenceToAdd);
+        literatureManager.getConferenceSeriesList().getConferenceSeries(seriesName).add(conferenceToAdd);
 
         Terminal.printLine("Ok");
 

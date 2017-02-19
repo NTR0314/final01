@@ -2,6 +2,8 @@ package literaturemanagement.commands;
 
 import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
+import literaturemanagement.entities.ConferenceSeries;
+import literaturemanagement.lists.ConferenceList;
 
 public class InProceedings extends Command {
     protected InProceedings() {
@@ -19,15 +21,29 @@ public class InProceedings extends Command {
 
         String[] splitCutString = cutString.split(",");
 
+        String seriesName = splitCutString[0];
         int yearToLookFor = Integer.parseInt(splitCutString[1]);
 
-        if (literatureManager.getConferenceSeriesList().getConferenceSeries(splitCutString[0]) == null) {
-            Terminal.printError("series " + splitCutString[0] + " not found.");
+        if (!literatureManager.getConferenceSeriesList().contains(seriesName)) {
+            Terminal.printError("series " + seriesName + " not found.");
             return;
         }
 
-//        literatureManager.getConferenceSeriesList().
-//                getConferenceSeries(splitCutString[0]).getArticles().printAllInYear(yearToLookFor);
+        ConferenceSeries cs = literatureManager.getConferenceSeriesList().getConferenceSeries(seriesName);
+
+        if (!cs.getConferences().containsAtYear(seriesName, yearToLookFor)) {
+            Terminal.printError("This conferenceseries has no conference in " + splitCutString[1]);
+            return;
+        }
+
+        ConferenceList c = cs.getConferences();
+
+        for (int i = 0; i < c.getLength(); i++) {
+            for (int j = 0; j < c.getAtIndex(i).getAtYear(yearToLookFor).getLength(); j++) {
+                Terminal.printLine(c.getAtIndex(i).getAtYear(yearToLookFor).getAtIndex(j).getIdentifier());
+
+            }
+        }
 
     }
 }

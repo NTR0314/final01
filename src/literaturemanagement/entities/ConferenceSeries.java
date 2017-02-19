@@ -27,4 +27,8 @@ public class ConferenceSeries {
             this.conferences.getAtIndex(i).addKeyword(keyword);
         }
     }
+
+    public ConferenceList getConferences() {
+        return conferences;
+    }
 }

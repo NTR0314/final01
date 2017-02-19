@@ -468,23 +468,23 @@ public class Terminal {
         tests.put("publications by test author", new String[] {
                 "Error,"
               });
-//
-//        // in proceedings
-//        tests.put("in proceedings ICSA,2016", new String[] {
-//                "rr2016",
-//                "rv2016"
-//              });
-//        tests.put("in proceedings ICSA,2017", new String[] {
-//                "rr2017"
-//              });
-//        tests.put("in proceedings QoSA,2016", new String[] {
-//              });
-//        tests.put("in proceedings uksa,2016", new String[] {
-//                "Error,"
-//        });
-//        tests.put("in proceedings ICSA,2020", new String[] {
-//                "Error,"
-//        });
+
+        // in proceedings
+        tests.put("in proceedings ICSA,2016", new String[] {
+                "rr2016",
+                "rv2016"
+              });
+        tests.put("in proceedings ICSA,2017", new String[] {
+                "rr2017"
+              });
+        tests.put("in proceedings QoSA,2016", new String[] {
+              });
+        tests.put("in proceedings uksa,2016", new String[] {
+                "Error,"
+        });
+        tests.put("in proceedings ICSA,2020", new String[] {
+                "Error,"
+        });
 //
 //        // find keywords
 //        tests.put("find keywords java", new String[] {

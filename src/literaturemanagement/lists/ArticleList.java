@@ -68,12 +68,15 @@ public class ArticleList {
         }
     }
 
-    public void printAllInYear(int year) {
+    public ArticleList getAllInYear(int year) {
+        ArticleList aL = new ArticleList();
         for (int i = 0; i < this.getLength(); i++) {
             if (this.getAtIndex(i).getYear() == year) {
-                Terminal.printLine(this.getAtIndex(i).getIdentifier());
+                aL.add(this.getAtIndex(i));
             }
         }
+
+        return aL;
     }
 
     public ArrayList<Article> getArticleList() {

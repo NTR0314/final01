@@ -3,6 +3,8 @@ package literaturemanagement.commands;
 import edu.kit.informatik.Terminal;
 import literaturemanagement.entities.Article;
 import literaturemanagement.LiteratureManager;
+import literaturemanagement.entities.Conference;
+import literaturemanagement.entities.ConferenceSeries;
 
 public class AddArticleToSeries extends Command {
     protected AddArticleToSeries() {
@@ -27,23 +29,23 @@ public class AddArticleToSeries extends Command {
 
         Article articleToAdd = new Article(articleName, articleTitle, year);
 
-        if (literatureManager.getConferenceSeriesList().getConferenceSeries(seriesName) == null) {
-            Terminal.printError("ConferenceSeries not found!");
+        if (!literatureManager.getConferenceList().contains(seriesName)) {
+            Terminal.printError("No Conference with that seriesName found!");
             return;
         }
+
+        Conference c = literatureManager.getConferenceList().getWithSeriesName(seriesName);
 
         if (!literatureManager.getConferenceList().containsAtYear(seriesName, year)) {
             Terminal.printError("Conference in that year not Existing");
             return;
         }
 
-        if (literatureManager.getConferenceList().getWithSeriesName(seriesName).contains(articleName)) {
-            Terminal.printError("This Conference already containsAtYear " + seriesName + "!");
+        if (c.contains(articleName)) {
+            Terminal.printError("This Conference already contains " + articleName + "!");
             return;
         } else {
-            literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0])
-                    .add(literatureManager.getConferenceList().getWithSeriesName(seriesName));
-            literatureManager.getConferenceList().getWithSeriesName(seriesName).add(articleToAdd);
+            c.add(articleToAdd);
             literatureManager.getArticleList().add(articleToAdd);
         }
 
