@@ -26,8 +26,8 @@ public class InProceedings extends Command {
             return;
         }
 
-        literatureManager.getConferenceSeriesList().
-                getConferenceSeries(splitCutString[0]).getArticles().printAllInYear(yearToLookFor);
+//        literatureManager.getConferenceSeriesList().
+//                getConferenceSeries(splitCutString[0]).getArticles().printAllInYear(yearToLookFor);
 
     }
 }

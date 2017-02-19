@@ -133,6 +133,17 @@ public class ArticleList {
         return false;
     }
 
+    public boolean contains(String id) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getIdentifier().equals(id)) {
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
     public ArticleList notWrittenBy(Author author) {
         ArticleList newArticleList = new ArticleList();
         for (int i = 0; i < this.getLength(); i++) {

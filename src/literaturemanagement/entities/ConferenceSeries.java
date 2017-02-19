@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class ConferenceSeries {
     private ConferenceList conferences = new ConferenceList();
-    private ArticleList articles = new ArticleList();
     private final String name;
     private KeywordList keywords = new KeywordList();
 
@@ -21,11 +20,7 @@ public class ConferenceSeries {
         return name;
     }
 
-    public ArrayList<Article> getArticleArrayList() {
-        return this.articles.getArticleList();
-    }
-
-    public ArticleList getArticles() {
-        return articles;
+    public void add(Conference conference) {
+        this.conferences.addConference(conference);
     }
 }

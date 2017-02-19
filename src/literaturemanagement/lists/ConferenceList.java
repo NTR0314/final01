@@ -1,5 +1,6 @@
 package literaturemanagement.lists;
 
+import literaturemanagement.entities.Article;
 import literaturemanagement.entities.Conference;
 
 import java.util.ArrayList;
@@ -44,5 +45,16 @@ public class ConferenceList {
 
     public Conference getAtIndex(int index) {
         return this.conferenceList.get(index);
+    }
+    // return null falls nicht vorhanden
+    public Conference getWithSeriesName(String seriesName) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.conferenceList.get(i).getSeriesName().equals(seriesName)) {
+                return this.conferenceList.get(i);
+            }
+
+        }
+
+        return null;
     }
 }

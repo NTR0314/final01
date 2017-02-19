@@ -10,7 +10,7 @@ public class CommandArray {
             new AddJournal(),
             new AddConferenceSeries(),
             new AddConference(),
-            new AddArticleTo(),
+            new AddArticleToSeries(),
             new WrittenBy(),
             new Cites(),
             new AddKeywordsTo(),

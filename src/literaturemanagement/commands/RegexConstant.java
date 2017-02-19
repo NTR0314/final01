@@ -18,8 +18,10 @@ public interface RegexConstant {
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + NO_PUNCTATION;
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
     String ADD_CONFERENCE = "add conference " + EVENT_NAME + "," + YEAR + "," + NO_PUNCTATION;
-    String ADD_ARTICLE_TOO = "add article to (series|journal) " + EVENT_NAME + ":" + PUBLICATION_IDENTIFIER + "," +
-            YEAR + "," + TITLE;
+    String ADD_ARTICLE_TOO_SERIES = "add article to series " + EVENT_NAME + ":" + PUBLICATION_IDENTIFIER + "," +
+            YEAR + "," + NO_PUNCTATION;
+    String ADD_ARTICLE_TOO_JOURNAL = "add article to journal " + EVENT_NAME + ":" + PUBLICATION_IDENTIFIER + "," +
+            YEAR + "," + NO_PUNCTATION;
     String WRITTEN_BY = "written-by " + PUBLICATION_IDENTIFIER + "," + AUTHORS;
     String CITES = "cites " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;
     String ADD_KEYWORDS_TO = "add keywords to " + ENTITIY + ":" + KEYWORDS_WITH_SEMICOLON;

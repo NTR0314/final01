@@ -1,13 +1,13 @@
 package literaturemanagement.entities;
 
-import java.util.ArrayList;
+import literaturemanagement.lists.ArticleList;
 
 public class Conference {
 
     private final String seriesName;
     private final int year;
     private final String location;
-    private ArrayList<Article> articles;
+    private ArticleList articles = new ArticleList();
 
     public Conference(String seriesName, int year, String location) {
         this.seriesName = seriesName;
@@ -21,5 +21,13 @@ public class Conference {
 
     public int getYear() {
         return year;
+    }
+
+    public boolean contains(String identifier) {
+        return this.articles.contains(identifier);
+    }
+
+    public void add(Article article) {
+        this.articles.add(article);
     }
 }

@@ -1,6 +1,5 @@
 package literaturemanagement.lists;
 
-import edu.kit.informatik.Terminal;
 import literaturemanagement.entities.ConferenceSeries;
 
 import java.util.ArrayList;
@@ -18,7 +17,6 @@ public class ConferenceSeriesList {
                 return this.conferenceSeriesList.get(i);
             }
         }
-        Terminal.printError("ConferenceSeries not found");
         return null;
     }
 

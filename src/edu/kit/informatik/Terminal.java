@@ -302,342 +302,342 @@ public class Terminal {
                 "Ok"
               });
         
-        // written-by
-        tests.put("written-by rr2017,Richard Rhinelander", new String[] {
-                "Ok"
-              });
-        tests.put("written-by rr2017,Richard Rhinelander;Eniola Lowry", new String[] {
-                "Error,"
-              });
-        tests.put("written-by rr2017,Eniola Lowry", new String[] {
-                "Ok"
-              });
-        tests.put("written-by rr2018,Richard Rhinelander", new String[] {
-                "Error,"
-              });
-        tests.put("written-by rr2017,eniola Lowry", new String[] {
-                "Ok"
-              });
-        tests.put("written-by mvp2015,Shashi Afolabi", new String[] {
-                "Ok"
-              });
-        tests.put("written-by mvp2016,Richard Rhinelander;Shashi Afolabi", new String[] {
-                "Ok"
-              });
-        tests.put("written-by rr2017,Test Author", new String[] {
-                "Error,"
-              });
-        tests.put("written-by rr2017,Eniola Rhinelander,", new String[] {
-                "Error,"
-              });
-        tests.put("written-by rr2017,Eniola Rhinelander,shashi afolabi", new String[] {
-                "Error,"
-              });
-        tests.put("written-by p0,a a", new String[] {
-                "Ok"
-              });
-        tests.put("written-by p1,a a;b b", new String[] {
-                "Ok"
-              });
-        tests.put("written-by p2,b b;c c", new String[] {
-                "Ok"
-              });
-        tests.put("written-by p3,c c;d d", new String[] {
-                "Ok"
-              });
-        
-        // cites
-        tests.put("cites rr2017,rr2016", new String[] {
-                "Ok"
-              });
-        tests.put("cites rr2017,mvp2015", new String[] {
-                "Ok"
-              });
-        tests.put("cites rr2016,rr2017", new String[] {
-                "Error,"
-              });
-        tests.put("cites rr2016,rr2016", new String[] {
-                "Error,"
-              });
-        tests.put("cites mvp2016,mvp2015", new String[] {
-                "Ok"
-              });
-        tests.put("cites abc2016,mvp2015", new String[] {
-                "Ok"
-              });
-        tests.put("cites mvp2015,mvp2015", new String[] {
-                "Error,"
-              });
-        tests.put("cites p1,p0", new String[] {
-                "Ok"
-              });
-        tests.put("cites p2,p0", new String[] {
-                "Ok"
-              });
-        tests.put("cites p3,p0", new String[] {
-                "Ok"
-              });
-        
-        // add keywords to
-        tests.put("add keywords to pub mvp2015:swe;java", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to pub mvp2016:swe;reference;java", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to pub mvp2016:oop;java", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to journal TSE:java", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to series ICSA:swe;performance", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to series BLA:test", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to series:test", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to conference ICSA,2016:java;oop", new String[] {
-                "Ok"
-              });
-        tests.put("add keywords to conference ICSA,2020:java;oop", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to conference KEK,2016:swe", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to conference KEK,2016:swe;dsadsa;", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to journal:doesnotexist", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to journal TSE:iNvAlIdKeYwOrD", new String[] {
-                "Error,"
-              });
-        tests.put("add keywords to journal TSE:12345", new String[] {
-                "Error,"
-              });
-        
-        tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
-                "Ok" // article added after keywords, keywords should still be inherited
-              });
-        
-        // all publications
-        tests.put("all publications", new String[] {
-                "rr2016",
-                "rr2017",
-                "rv2016",
-                "mvp2015",
-                "mvp2016",
-                "mvp2017",
-                "abc2016",
-                "p0",
-                "p1",
-                "p2",
-                "p3"
-              });
-        
-        // list invalid publications
-        tests.put("list invalid publications", new String[] {
-                "rr2016",
-                "rv2016",
-                "abc2016",
-                "mvp2017"
-              });
-        
-        // publications by
-        tests.put("publications by Eniola Lowry", new String[] {
-                "rr2017"
-              });
-        tests.put("publications by Eniola Lowry;Richard Rhinelander", new String[] {
-                "rr2017",
-                "mvp2016"
-              });
-        tests.put("publications by Shashi Afolabi;eniola Lowry", new String[] {
-                "rr2017",
-                "mvp2015",
-                "mvp2016"
-              });
-        tests.put("publications by Eniola Lowry;and me", new String[] {
-                "Error,"
-              });
-        tests.put("publications by test author", new String[] {
-                "Error,"
-              });
-        
-        // in proceedings
-        tests.put("in proceedings ICSA,2016", new String[] {
-                "rr2016",
-                "rv2016"
-              });
-        tests.put("in proceedings ICSA,2017", new String[] {
-                "rr2017"
-              });
-        tests.put("in proceedings QoSA,2016", new String[] {
-              });
-        tests.put("in proceedings uksa,2016", new String[] {
-                "Error,"
-        });
-        tests.put("in proceedings ICSA,2020", new String[] {
-                "Error,"
-        });
-        
-        // find keywords
-        tests.put("find keywords java", new String[] {
-                "mvp2015",
-                "mvp2016",
-                "mvp2017",
-                "rr2016",
-                "rv2016",
-                "p0",
-                "p1",
-                "p2",
-                "p3"
-        });
-        tests.put("find keywords notfound", new String[] {
-        });
-        tests.put("find keywords java;", new String[] {
-                "Error,"
-        });
-        tests.put("find keywords java;performance", new String[] {
-                "rr2016",
-                "rv2016"
-        });
-        
-        // jaccard
-        tests.put("jaccard a;b;c d;e", new String[] {
-                "0.000"
-        });
-        tests.put("jaccard a;b;c;d;e b;c;d;e;f", new String[] {
-                "0.666"
-        });
-        tests.put("jaccard a;b;c;d;e;f;g b;c;d;e;f", new String[] {
-                "0.714"
-        });
-        
-        // similarity        
-        tests.put("similarity mvp2015,mvp2016", new String[] {
-                "0.500"
-        });
-        tests.put("similarity mvp2016,mvp2016", new String[] {
-                "1.000"
-        });
-        tests.put("similarity rv2016,mvp2017", new String[] {
-                "0.250"
-        });
-        
-        // direct h-index
-        tests.put("direct h-index 17;3;1;5", new String[] {
-                "3"
-        });
-        tests.put("direct h-index 8;6;8;4;8;6", new String[] {
-                "5"
-        });
-        tests.put("direct h-index 10;9;8;7;6;5;4;3;2;1", new String[] {
-                "5"
-        });
-        tests.put("direct h-index 100;100;2;2;2;2;2;2;2;2", new String[] {
-                "2"
-        });
-        tests.put("direct h-index 100;100;9;8;3;2;2;1;1", new String[] {
-                "4"
-        });
-        tests.put("direct h-index 1;6;3;8;3;7;4;8;5", new String[] {
-                "5"
-        });
-        tests.put("direct h-index 4543;765;3465;743;9853;34243;4543;2321;5436;9978", new String[] {
-                "10"
-        });
-        tests.put("direct h-index 1;2;3;4;5;6;7;8;9;10;11;12;13;14;15", new String[] {
-                "8"
-        });
-        tests.put("direct h-index 8;7;6;5;4;3;2;1;9;10;11;12;13;14;15", new String[] {
-                "8"
-        });
-        
-        // h-index
-        tests.put("h-index some dude", new String[] {
-                "Error,"
-        });
-        tests.put("h-index Richard Rhinelander", new String[] {
-                "0"
-        });
-        tests.put("h-index Shashi Afolabi", new String[] {
-                "1"
-        });
-        
-        // coauthors of
-        tests.put("coauthors of Shashi Afolabi", new String[] {
-                "Richard Rhinelander"
-        });
-        tests.put("coauthors of Richard Rhinelander", new String[] {
-                "Shashi Afolabi",
-                "eniola Lowry",
-                "Eniola Lowry"
-        });
-        tests.put("coauthors of eniola Lowry", new String[] {
-                "Richard Rhinelander",
-                "Eniola Lowry"
-        });
-        tests.put("coauthors of test dude", new String[] {
-                "Error,"
-        });
-        
-        // foreign citations of
-        tests.put("foreign citations of Richard Rhinelander", new String[] {
-        });
-        tests.put("foreign citations of a a", new String[] {
-                "p3"
-        });
-        
-        // direct print conference
-        tests.put("direct print conference ieee:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
-                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
-                "[1] S. Brin and L. Page, \"The Anatomy of a Large-Scale Hypertextual Web Search Engine,\" in "
-                + "Proceedings of WWW, Brisbane Australia, 1998."
-        });
-        tests.put("direct print conference chicago:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
-                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
-                "(Brin, 1998) Brin, Sergey, and Page, Lawrence. \"The Anatomy of a Large-Scale Hypertextual Web Search"
-                + " Engine.\" Paper presented at WWW, 1998, Brisbane Australia."
-        });
-        
-        // direct print journal
-        tests.put("direct print journal ieee:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
-                + "Comm. of the ACM,1968", new String[] {
-                "[1] E. Dijkstra, \"Go To Statement Considered Harmful,\" Comm. of the ACM, 1968."
-        });
-        tests.put("direct print journal chicago:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
-                + "Comm. of the ACM,1968", new String[] {
-                "(Dijkstra, 1968) Dijkstra, Edsger. \"Go To Statement Considered Harmful.\" Comm. of the ACM (1968)."
-        });
-        
-        // print bibliography
-        tests.put("print bibliography ieee:mvp2017", new String[] {
-                "Error,"
-        });
-        tests.put("print bibliography ieee:rr2017", new String[] {
-                "[1] R. Rhinelander et al., \"Components still have no interfaces,\" in Proceedings of ICSA, "
-                + "Gothenburg, 2017."
-        });
-        tests.put("print bibliography ieee:p1;p2;p3;rr2017", new String[] {
-                "[1] R. Rhinelander et al., \"Components still have no interfaces,\""
-                + " in Proceedings of ICSA, Gothenburg, 2017.",
-                "[2] A. a and B. b, \"Title,\" TSE, 2013.",
-                "[3] B. b and C. c, \"Title,\" TSE, 2014.",
-                "[4] C. c and D. d, \"Title,\" TSE, 2015."
-        });
-        tests.put("print bibliography chicago:p1;p2;p3;rr2017", new String[] {
-                "(Rhinelander, 2017) Rhinelander, Richard, Lowry, Eniola, and Lowry, eniola. \"Components still have "
-                + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
-                "(a, 2013) a, a, and b, b. \"Title.\" TSE (2013).",
-                "(b, 2014) b, b, and c, c. \"Title.\" TSE (2014).",
-                "(c, 2015) c, c, and d, d. \"Title.\" TSE (2015)."
-        });
+//        // written-by
+//        tests.put("written-by rr2017,Richard Rhinelander", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by rr2017,Richard Rhinelander;Eniola Lowry", new String[] {
+//                "Error,"
+//              });
+//        tests.put("written-by rr2017,Eniola Lowry", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by rr2018,Richard Rhinelander", new String[] {
+//                "Error,"
+//              });
+//        tests.put("written-by rr2017,eniola Lowry", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by mvp2015,Shashi Afolabi", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by mvp2016,Richard Rhinelander;Shashi Afolabi", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by rr2017,Test Author", new String[] {
+//                "Error,"
+//              });
+//        tests.put("written-by rr2017,Eniola Rhinelander,", new String[] {
+//                "Error,"
+//              });
+//        tests.put("written-by rr2017,Eniola Rhinelander,shashi afolabi", new String[] {
+//                "Error,"
+//              });
+//        tests.put("written-by p0,a a", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by p1,a a;b b", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by p2,b b;c c", new String[] {
+//                "Ok"
+//              });
+//        tests.put("written-by p3,c c;d d", new String[] {
+//                "Ok"
+//              });
+//
+//        // cites
+//        tests.put("cites rr2017,rr2016", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites rr2017,mvp2015", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites rr2016,rr2017", new String[] {
+//                "Error,"
+//              });
+//        tests.put("cites rr2016,rr2016", new String[] {
+//                "Error,"
+//              });
+//        tests.put("cites mvp2016,mvp2015", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites abc2016,mvp2015", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites mvp2015,mvp2015", new String[] {
+//                "Error,"
+//              });
+//        tests.put("cites p1,p0", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites p2,p0", new String[] {
+//                "Ok"
+//              });
+//        tests.put("cites p3,p0", new String[] {
+//                "Ok"
+//              });
+//
+//        // add keywords to
+//        tests.put("add keywords to pub mvp2015:swe;java", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to pub mvp2016:swe;reference;java", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to pub mvp2016:oop;java", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to journal TSE:java", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to series ICSA:swe;performance", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to series BLA:test", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to series:test", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to conference ICSA,2016:java;oop", new String[] {
+//                "Ok"
+//              });
+//        tests.put("add keywords to conference ICSA,2020:java;oop", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to conference KEK,2016:swe", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to conference KEK,2016:swe;dsadsa;", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to journal:doesnotexist", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to journal TSE:iNvAlIdKeYwOrD", new String[] {
+//                "Error,"
+//              });
+//        tests.put("add keywords to journal TSE:12345", new String[] {
+//                "Error,"
+//              });
+//
+//        tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
+//                "Ok" // article added after keywords, keywords should still be inherited
+//              });
+//
+//        // all publications
+//        tests.put("all publications", new String[] {
+//                "rr2016",
+//                "rr2017",
+//                "rv2016",
+//                "mvp2015",
+//                "mvp2016",
+//                "mvp2017",
+//                "abc2016",
+//                "p0",
+//                "p1",
+//                "p2",
+//                "p3"
+//              });
+//
+//        // list invalid publications
+//        tests.put("list invalid publications", new String[] {
+//                "rr2016",
+//                "rv2016",
+//                "abc2016",
+//                "mvp2017"
+//              });
+//
+//        // publications by
+//        tests.put("publications by Eniola Lowry", new String[] {
+//                "rr2017"
+//              });
+//        tests.put("publications by Eniola Lowry;Richard Rhinelander", new String[] {
+//                "rr2017",
+//                "mvp2016"
+//              });
+//        tests.put("publications by Shashi Afolabi;eniola Lowry", new String[] {
+//                "rr2017",
+//                "mvp2015",
+//                "mvp2016"
+//              });
+//        tests.put("publications by Eniola Lowry;and me", new String[] {
+//                "Error,"
+//              });
+//        tests.put("publications by test author", new String[] {
+//                "Error,"
+//              });
+//
+//        // in proceedings
+//        tests.put("in proceedings ICSA,2016", new String[] {
+//                "rr2016",
+//                "rv2016"
+//              });
+//        tests.put("in proceedings ICSA,2017", new String[] {
+//                "rr2017"
+//              });
+//        tests.put("in proceedings QoSA,2016", new String[] {
+//              });
+//        tests.put("in proceedings uksa,2016", new String[] {
+//                "Error,"
+//        });
+//        tests.put("in proceedings ICSA,2020", new String[] {
+//                "Error,"
+//        });
+//
+//        // find keywords
+//        tests.put("find keywords java", new String[] {
+//                "mvp2015",
+//                "mvp2016",
+//                "mvp2017",
+//                "rr2016",
+//                "rv2016",
+//                "p0",
+//                "p1",
+//                "p2",
+//                "p3"
+//        });
+//        tests.put("find keywords notfound", new String[] {
+//        });
+//        tests.put("find keywords java;", new String[] {
+//                "Error,"
+//        });
+//        tests.put("find keywords java;performance", new String[] {
+//                "rr2016",
+//                "rv2016"
+//        });
+//
+//        // jaccard
+//        tests.put("jaccard a;b;c d;e", new String[] {
+//                "0.000"
+//        });
+//        tests.put("jaccard a;b;c;d;e b;c;d;e;f", new String[] {
+//                "0.666"
+//        });
+//        tests.put("jaccard a;b;c;d;e;f;g b;c;d;e;f", new String[] {
+//                "0.714"
+//        });
+//
+//        // similarity
+//        tests.put("similarity mvp2015,mvp2016", new String[] {
+//                "0.500"
+//        });
+//        tests.put("similarity mvp2016,mvp2016", new String[] {
+//                "1.000"
+//        });
+//        tests.put("similarity rv2016,mvp2017", new String[] {
+//                "0.250"
+//        });
+//
+//        // direct h-index
+//        tests.put("direct h-index 17;3;1;5", new String[] {
+//                "3"
+//        });
+//        tests.put("direct h-index 8;6;8;4;8;6", new String[] {
+//                "5"
+//        });
+//        tests.put("direct h-index 10;9;8;7;6;5;4;3;2;1", new String[] {
+//                "5"
+//        });
+//        tests.put("direct h-index 100;100;2;2;2;2;2;2;2;2", new String[] {
+//                "2"
+//        });
+//        tests.put("direct h-index 100;100;9;8;3;2;2;1;1", new String[] {
+//                "4"
+//        });
+//        tests.put("direct h-index 1;6;3;8;3;7;4;8;5", new String[] {
+//                "5"
+//        });
+//        tests.put("direct h-index 4543;765;3465;743;9853;34243;4543;2321;5436;9978", new String[] {
+//                "10"
+//        });
+//        tests.put("direct h-index 1;2;3;4;5;6;7;8;9;10;11;12;13;14;15", new String[] {
+//                "8"
+//        });
+//        tests.put("direct h-index 8;7;6;5;4;3;2;1;9;10;11;12;13;14;15", new String[] {
+//                "8"
+//        });
+//
+//        // h-index
+//        tests.put("h-index some dude", new String[] {
+//                "Error,"
+//        });
+//        tests.put("h-index Richard Rhinelander", new String[] {
+//                "0"
+//        });
+//        tests.put("h-index Shashi Afolabi", new String[] {
+//                "1"
+//        });
+//
+//        // coauthors of
+//        tests.put("coauthors of Shashi Afolabi", new String[] {
+//                "Richard Rhinelander"
+//        });
+//        tests.put("coauthors of Richard Rhinelander", new String[] {
+//                "Shashi Afolabi",
+//                "eniola Lowry",
+//                "Eniola Lowry"
+//        });
+//        tests.put("coauthors of eniola Lowry", new String[] {
+//                "Richard Rhinelander",
+//                "Eniola Lowry"
+//        });
+//        tests.put("coauthors of test dude", new String[] {
+//                "Error,"
+//        });
+//
+//        // foreign citations of
+//        tests.put("foreign citations of Richard Rhinelander", new String[] {
+//        });
+//        tests.put("foreign citations of a a", new String[] {
+//                "p3"
+//        });
+//
+//        // direct print conference
+//        tests.put("direct print conference ieee:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
+//                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
+//                "[1] S. Brin and L. Page, \"The Anatomy of a Large-Scale Hypertextual Web Search Engine,\" in "
+//                + "Proceedings of WWW, Brisbane Australia, 1998."
+//        });
+//        tests.put("direct print conference chicago:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
+//                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
+//                "(Brin, 1998) Brin, Sergey, and Page, Lawrence. \"The Anatomy of a Large-Scale Hypertextual Web Search"
+//                + " Engine.\" Paper presented at WWW, 1998, Brisbane Australia."
+//        });
+//
+//        // direct print journal
+//        tests.put("direct print journal ieee:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
+//                + "Comm. of the ACM,1968", new String[] {
+//                "[1] E. Dijkstra, \"Go To Statement Considered Harmful,\" Comm. of the ACM, 1968."
+//        });
+//        tests.put("direct print journal chicago:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
+//                + "Comm. of the ACM,1968", new String[] {
+//                "(Dijkstra, 1968) Dijkstra, Edsger. \"Go To Statement Considered Harmful.\" Comm. of the ACM (1968)."
+//        });
+//
+//        // print bibliography
+//        tests.put("print bibliography ieee:mvp2017", new String[] {
+//                "Error,"
+//        });
+//        tests.put("print bibliography ieee:rr2017", new String[] {
+//                "[1] R. Rhinelander et al., \"Components still have no interfaces,\" in Proceedings of ICSA, "
+//                + "Gothenburg, 2017."
+//        });
+//        tests.put("print bibliography ieee:p1;p2;p3;rr2017", new String[] {
+//                "[1] R. Rhinelander et al., \"Components still have no interfaces,\""
+//                + " in Proceedings of ICSA, Gothenburg, 2017.",
+//                "[2] A. a and B. b, \"Title,\" TSE, 2013.",
+//                "[3] B. b and C. c, \"Title,\" TSE, 2014.",
+//                "[4] C. c and D. d, \"Title,\" TSE, 2015."
+//        });
+//        tests.put("print bibliography chicago:p1;p2;p3;rr2017", new String[] {
+//                "(Rhinelander, 2017) Rhinelander, Richard, Lowry, Eniola, and Lowry, eniola. \"Components still have "
+//                + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
+//                "(a, 2013) a, a, and b, b. \"Title.\" TSE (2013).",
+//                "(b, 2014) b, b, and c, c. \"Title.\" TSE (2014).",
+//                "(c, 2015) c, c, and d, d. \"Title.\" TSE (2015)."
+//        });
 
         cmds = tests.keySet().toArray();
         outp = tests.values().toArray();
