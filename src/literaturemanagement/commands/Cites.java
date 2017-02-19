@@ -21,6 +21,8 @@ public class Cites extends Command {
 
         String id1 = splitCutInput[0];
         String id2 = splitCutInput[1];
+        int year1 = literatureManager.getArticleList().getArticle(id1).getYear();
+        int year2 = literatureManager.getArticleList().getArticle(id2).getYear();
 
         if (literatureManager.getArticleList().getArticle(id1) == null) {
             Terminal.printError("First Article not found");
@@ -32,9 +34,15 @@ public class Cites extends Command {
             return;
         }
 
+        if (year1 <= year2) {
+            Terminal.printError("Can not reference to an Article from same or higher year!");
+            return;
+        }
+
         Article articleToAdd = literatureManager.getArticleList().getArticle(id2);
 
         literatureManager.getArticleList().getArticle(id1).getReferences().add(articleToAdd);
+        Terminal.printLine("Ok");
 
     }
 }

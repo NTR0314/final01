@@ -345,38 +345,38 @@ public class Terminal {
         tests.put("written-by p3,c c;d d", new String[] {
                 "Ok"
               });
-//
-//        // cites
-//        tests.put("cites rr2017,rr2016", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites rr2017,mvp2015", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites rr2016,rr2017", new String[] {
-//                "Error,"
-//              });
-//        tests.put("cites rr2016,rr2016", new String[] {
-//                "Error,"
-//              });
-//        tests.put("cites mvp2016,mvp2015", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites abc2016,mvp2015", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites mvp2015,mvp2015", new String[] {
-//                "Error,"
-//              });
-//        tests.put("cites p1,p0", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites p2,p0", new String[] {
-//                "Ok"
-//              });
-//        tests.put("cites p3,p0", new String[] {
-//                "Ok"
-//              });
+
+        // cites
+        tests.put("cites rr2017,rr2016", new String[] {
+                "Ok"
+              });
+        tests.put("cites rr2017,mvp2015", new String[] {
+                "Ok"
+              });
+        tests.put("cites rr2016,rr2017", new String[] {
+                "Error,"
+              });
+        tests.put("cites rr2016,rr2016", new String[] {
+                "Error,"
+              });
+        tests.put("cites mvp2016,mvp2015", new String[] {
+                "Ok"
+              });
+        tests.put("cites abc2016,mvp2015", new String[] {
+                "Ok"
+              });
+        tests.put("cites mvp2015,mvp2015", new String[] {
+                "Error,"
+              });
+        tests.put("cites p1,p0", new String[] {
+                "Ok"
+              });
+        tests.put("cites p2,p0", new String[] {
+                "Ok"
+              });
+        tests.put("cites p3,p0", new String[] {
+                "Ok"
+              });
 //
 //        // add keywords to
 //        tests.put("add keywords to pub mvp2015:swe;java", new String[] {
