@@ -1,6 +1,7 @@
 package literaturemanagement.entities;
 
 import literaturemanagement.lists.ArticleList;
+import literaturemanagement.lists.KeywordList;
 
 public class Conference {
 
@@ -8,6 +9,7 @@ public class Conference {
     private final int year;
     private final String location;
     private ArticleList articles = new ArticleList();
+    private KeywordList keywords = new KeywordList();
 
     public Conference(String seriesName, int year, String location) {
         this.seriesName = seriesName;
@@ -29,5 +31,13 @@ public class Conference {
 
     public void add(Article article) {
         this.articles.add(article);
+    }
+
+    public void addKeyword(String keyword) {
+        this.keywords.addKeyword(keyword);
+
+        for (int i = 0; i < this.articles.getLength(); i++) {
+            this.articles.getAtIndex(i).addKeyword(keyword);
+        }
     }
 }

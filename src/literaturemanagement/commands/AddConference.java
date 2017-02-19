@@ -27,7 +27,7 @@ public class AddConference extends Command{
         Conference conferenceToAdd = (new Conference(splittedCuttedInput[0],
                 Integer.parseInt(splittedCuttedInput[1]), splittedCuttedInput[2]));
 
-        if (literatureManager.getConferenceList().contains(conferenceToAdd)) {
+        if (literatureManager.getConferenceList().containsAtYear(conferenceToAdd)) {
             Terminal.printError("Conference already existing!");
             return;
         }

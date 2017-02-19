@@ -63,4 +63,8 @@ public class Article {
 
         return false;
     }
+
+    public void addKeyword(String keyword) {
+        this.keywordList.addKeyword(keyword);
+    }
 }

@@ -32,13 +32,13 @@ public class AddArticleToSeries extends Command {
             return;
         }
 
-        if (!literatureManager.getConferenceList().contains(seriesName, year)) {
+        if (!literatureManager.getConferenceList().containsAtYear(seriesName, year)) {
             Terminal.printError("Conference in that year not Existing");
             return;
         }
 
         if (literatureManager.getConferenceList().getWithSeriesName(seriesName).contains(articleName)) {
-            Terminal.printError("This Conference already contains " + seriesName + "!");
+            Terminal.printError("This Conference already containsAtYear " + seriesName + "!");
             return;
         } else {
             literatureManager.getConferenceSeriesList().getConferenceSeries(splittedCutInput[0])

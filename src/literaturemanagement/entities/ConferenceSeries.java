@@ -1,11 +1,7 @@
 package literaturemanagement.entities;
 
-import literaturemanagement.entities.Article;
-import literaturemanagement.lists.ArticleList;
 import literaturemanagement.lists.ConferenceList;
 import literaturemanagement.lists.KeywordList;
-
-import java.util.ArrayList;
 
 public class ConferenceSeries {
     private ConferenceList conferences = new ConferenceList();
@@ -22,5 +18,13 @@ public class ConferenceSeries {
 
     public void add(Conference conference) {
         this.conferences.addConference(conference);
+    }
+
+    public void addKeyword(String keyword) {
+        this.keywords.addKeyword(keyword);
+
+        for (int i = 0; i < this.conferences.getLength(); i++) {
+            this.conferences.getAtIndex(i).addKeyword(keyword);
+        }
     }
 }

@@ -377,54 +377,54 @@ public class Terminal {
         tests.put("cites p3,p0", new String[] {
                 "Ok"
               });
-//
-//        // add keywords to
-//        tests.put("add keywords to pub mvp2015:swe;java", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to pub mvp2016:swe;reference;java", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to pub mvp2016:oop;java", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to journal TSE:java", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to series ICSA:swe;performance", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to series BLA:test", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to series:test", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to conference ICSA,2016:java;oop", new String[] {
-//                "Ok"
-//              });
-//        tests.put("add keywords to conference ICSA,2020:java;oop", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to conference KEK,2016:swe", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to conference KEK,2016:swe;dsadsa;", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to journal:doesnotexist", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to journal TSE:iNvAlIdKeYwOrD", new String[] {
-//                "Error,"
-//              });
-//        tests.put("add keywords to journal TSE:12345", new String[] {
-//                "Error,"
-//              });
-//
-//        tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
-//                "Ok" // article added after keywords, keywords should still be inherited
-//              });
+
+        // add keywords to
+        tests.put("add keywords to pub mvp2015:swe;java", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to pub mvp2016:swe;reference;java", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to pub mvp2016:oop;java", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to journal TSE:java", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to series ICSA:swe;performance", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to series BLA:test", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to series:test", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to conference ICSA,2016:java;oop", new String[] {
+                "Ok"
+              });
+        tests.put("add keywords to conference ICSA,2020:java;oop", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to conference KEK,2016:swe", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to conference KEK,2016:swe;dsadsa;", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to journal:doesnotexist", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to journal TSE:iNvAlIdKeYwOrD", new String[] {
+                "Error,"
+              });
+        tests.put("add keywords to journal TSE:12345", new String[] {
+                "Error,"
+              });
+
+        tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
+                "Ok" // article added after keywords, keywords should still be inherited
+              });
 //
 //        // all publications
 //        tests.put("all publications", new String[] {

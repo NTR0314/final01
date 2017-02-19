@@ -13,7 +13,7 @@ public class ConferenceList {
         this.conferenceList.add(conference);
     }
 
-    public boolean contains(Conference conference) {
+    public boolean containsAtYear(Conference conference) {
         for (int i = 0; i < this.getLength(); i++) {
             if (this.getAtIndex(i).getSeriesName().equals(conference.getSeriesName()) &&
                     this.getAtIndex(i).getYear() == conference.getYear()) {
@@ -26,10 +26,22 @@ public class ConferenceList {
 
     }
 
-    public boolean contains(String name, int year) {
+    public boolean containsAtYear(String name, int year) {
         for (int i = 0; i < this.getLength(); i++) {
             if (this.getAtIndex(i).getSeriesName().equals(name) &&
                     this.getAtIndex(i).getYear() == year) {
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
+    public boolean contains(String name) {
+        for (int i = 0; i < this.getLength(); i++) {
+            if (this.getAtIndex(i).getSeriesName().equals(name)) {
                 return true;
             }
 
