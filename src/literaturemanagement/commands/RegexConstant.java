@@ -10,7 +10,6 @@ public interface RegexConstant {
     String AUTHORS = "[; A-Za-z\u00d6\u00dc\u00c4\u00f6\u00e4\u00fc]+";
     String QUIT = "quit";
     String KEYWORDS_WITH_SEMICOLON = "[a-z]+(;?[a-z])*";
-    String KEYWORDS_WITH_COMMA = "[a-z]+(,?[a-z])*";
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
     String ADD_JOURNAL = "add journal " + EVENT_NAME + "," + NO_PUNCTATION;
     String ADD_CONFERENCE_SERIES = "add conference series " + EVENT_NAME;
@@ -30,7 +29,7 @@ public interface RegexConstant {
     String LIST_INVALID_PUBLICATIONS = "list invalid publications";
     String PUBLICATIONS_BY = "publications by [; A-Za-zÖÜÄöäü]+";
     String IN_PROCEEDINGS = "in proceedings " + EVENT_NAME + "," + YEAR;
-    String FIND_KEYWORDS = "find keywords " + KEYWORDS_WITH_COMMA;
+    String FIND_KEYWORDS = "find keywords " + KEYWORDS_WITH_SEMICOLON;
     String LIST_OF_KEYWORDS = "[a-z\u00f6\u00e4\u00fc]+[;a-z\u00f6\u00e4\u00fc]*";
     String JACCARD = "jaccard " + LIST_OF_KEYWORDS + " " + LIST_OF_KEYWORDS;
     String SIMILARITY = "similarity " + PUBLICATION_IDENTIFIER + "," + PUBLICATION_IDENTIFIER;

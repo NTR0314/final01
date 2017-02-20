@@ -67,4 +67,10 @@ public class Article {
     public void addKeyword(String keyword) {
         this.keywordList.addKeyword(keyword);
     }
+
+    public void addKeywords(KeywordList keywords) {
+        for (int i = 0; i < keywords.getLength(); i++) {
+            this.addKeyword(keywords.getAtIndex(i));
+        }
+    }
 }

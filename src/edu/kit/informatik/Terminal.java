@@ -485,28 +485,28 @@ public class Terminal {
         tests.put("in proceedings ICSA,2020", new String[] {
                 "Error,"
         });
-//
-//        // find keywords
-//        tests.put("find keywords java", new String[] {
-//                "mvp2015",
-//                "mvp2016",
-//                "mvp2017",
-//                "rr2016",
-//                "rv2016",
-//                "p0",
-//                "p1",
-//                "p2",
-//                "p3"
-//        });
-//        tests.put("find keywords notfound", new String[] {
-//        });
-//        tests.put("find keywords java;", new String[] {
-//                "Error,"
-//        });
-//        tests.put("find keywords java;performance", new String[] {
-//                "rr2016",
-//                "rv2016"
-//        });
+
+        // find keywords
+        tests.put("find keywords java", new String[] {
+                "mvp2015",
+                "mvp2016",
+                "mvp2017",
+                "rr2016",
+                "rv2016",
+                "p0",
+                "p1",
+                "p2",
+                "p3"
+        });
+        tests.put("find keywords notfound", new String[] {
+        });
+        tests.put("find keywords java;", new String[] {
+                "Error,"
+        });
+        tests.put("find keywords java;performance", new String[] {
+                "rr2016",
+                "rv2016"
+        });
 //
 //        // jaccard
 //        tests.put("jaccard a;b;c d;e", new String[] {

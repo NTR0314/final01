@@ -31,6 +31,8 @@ public class Conference {
 
     public void add(Article article) {
         this.articles.add(article);
+
+        article.addKeywords(this.keywords);
     }
 
     public void addKeyword(String keyword) {
@@ -38,6 +40,12 @@ public class Conference {
 
         for (int i = 0; i < this.articles.getLength(); i++) {
             this.articles.getAtIndex(i).addKeyword(keyword);
+        }
+    }
+
+    public void addKeywords(KeywordList keywords) {
+        for (int i = 0; i < keywords.getLength(); i++) {
+            this.addKeyword(keywords.getAtIndex(i));
         }
     }
 

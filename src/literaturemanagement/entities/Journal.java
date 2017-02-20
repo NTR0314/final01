@@ -25,6 +25,8 @@ public class Journal {
 
     public void add(Article article) {
         this.articles.add(article);
+
+        article.addKeywords(this.keywords);
     }
 
     public void addKeywords(String keyword) {

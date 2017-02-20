@@ -19,13 +19,16 @@ public class FindKeywords extends Command {
     public void execute(LiteratureManager literatureManager, String input) {
         String cutInput = cutString(input);
 
-        String[] splitCutInput = cutInput.split(",");
+        String[] splitCutInput = cutInput.split(";");
 
         KeywordList keywordsToLookFor = new KeywordList(splitCutInput);
 
         ArticleList articlesWithKeywords = literatureManager.getArticleList().getWithKeywords(keywordsToLookFor);
 
-        Terminal.printLine(articlesWithKeywords.toString());
+        for (int i = 0; i < articlesWithKeywords.getLength(); i++) {
+            Terminal.printLine(articlesWithKeywords.getAtIndex(i).getIdentifier());
+
+        }
 
     }
 }

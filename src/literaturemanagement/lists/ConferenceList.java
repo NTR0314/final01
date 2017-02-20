@@ -58,9 +58,10 @@ public class ConferenceList {
         return this.conferenceList.get(index);
     }
 
-    public Conference getWithSeriesName(String seriesName) {
+    public Conference getConference(String seriesName, int year) {
         for (int i = 0; i < this.getLength(); i++) {
-            if (this.conferenceList.get(i).getSeriesName().equals(seriesName)) {
+            if (this.conferenceList.get(i).getSeriesName().equals(seriesName)
+                    && this.conferenceList.get(i).getYear() == year) {
                 return this.conferenceList.get(i);
             }
 

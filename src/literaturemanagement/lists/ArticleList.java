@@ -97,28 +97,13 @@ public class ArticleList {
     }
 
     public ArticleList getWithKeywords(KeywordList keywordList) {
-        ArticleList newArticleListContainingKeywords = new ArticleList();
+        ArticleList newArticleListContainingKeywords = this.getWithKeyword(keywordList.getAtIndex(0));
 
-        for (int i = 0; i < keywordList.getLength(); i++) {
-            newArticleListContainingKeywords.add(getWithKeyword(keywordList.getAtIndex(i)));
+        for (int i = 1; i < keywordList.getLength(); i++) {
+            newArticleListContainingKeywords = newArticleListContainingKeywords.getWithKeyword(keywordList.getAtIndex(i));
         }
 
         return newArticleListContainingKeywords;
-    }
-
-    public String toString() {
-        if (this.getLength() == 0) {
-            return "";
-        }
-
-        String tempString = this.getAtIndex(0).toString();
-
-        for (int i = 1; i < this.getLength(); i++) {
-            tempString = tempString + "\n" + this.getAtIndex(i).toString();
-
-        }
-
-        return tempString;
     }
 
     public ArticleList getByAuthor(Author author) {
@@ -193,7 +178,7 @@ public class ArticleList {
 
     public ArticleList addWithoutDuplicates(ArticleList articleList) {
         ArticleList newArticleList = this;
-        for (int i = 0; i < newArticleList.getLength(); i++) {
+        for (int i = 0; i < articleList.getLength(); i++) {
             if (!this.contains(articleList.getAtIndex(i))) {
                 newArticleList.add(articleList.getAtIndex(i));
             }

@@ -28,7 +28,7 @@ public class AddKeywordsToConference extends Command {
             return;
         }
 
-        Conference c = literatureManager.getConferenceList().getWithSeriesName(seriesName);
+        Conference c = literatureManager.getConferenceList().getConference(seriesName, year);
 
         for (int i = 2; i < splitCutString.length; i++) {
             c.addKeyword(splitCutString[i]);

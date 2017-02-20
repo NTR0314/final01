@@ -29,23 +29,23 @@ public class AddArticleToSeries extends Command {
 
         Article articleToAdd = new Article(articleName, articleTitle, year);
 
-        if (!literatureManager.getConferenceList().contains(seriesName)) {
+        if (!literatureManager.getConferenceSeriesList().contains(seriesName)) {
             Terminal.printError("No Conference with that seriesName found!");
             return;
         }
 
-        Conference c = literatureManager.getConferenceList().getWithSeriesName(seriesName);
+        ConferenceSeries cs = literatureManager.getConferenceSeriesList().getConferenceSeries(seriesName);
 
         if (!literatureManager.getConferenceList().containsAtYear(seriesName, year)) {
             Terminal.printError("Conference in that year not Existing");
             return;
         }
 
-        if (c.contains(articleName)) {
-            Terminal.printError("This Conference already contains " + articleName + "!");
+        if (cs.contains(articleName)) {
+            Terminal.printError("This Conferenceseries already contains " + articleName + "!");
             return;
         } else {
-            c.add(articleToAdd);
+            cs.getConference(year).add(articleToAdd);
             literatureManager.getArticleList().add(articleToAdd);
         }
 
