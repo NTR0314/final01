@@ -507,85 +507,85 @@ public class Terminal {
                 "rr2016",
                 "rv2016"
         });
-//
-//        // jaccard
-//        tests.put("jaccard a;b;c d;e", new String[] {
-//                "0.000"
-//        });
-//        tests.put("jaccard a;b;c;d;e b;c;d;e;f", new String[] {
-//                "0.666"
-//        });
-//        tests.put("jaccard a;b;c;d;e;f;g b;c;d;e;f", new String[] {
-//                "0.714"
-//        });
-//
-//        // similarity
-//        tests.put("similarity mvp2015,mvp2016", new String[] {
-//                "0.500"
-//        });
-//        tests.put("similarity mvp2016,mvp2016", new String[] {
-//                "1.000"
-//        });
-//        tests.put("similarity rv2016,mvp2017", new String[] {
-//                "0.250"
-//        });
-//
-//        // direct h-index
-//        tests.put("direct h-index 17;3;1;5", new String[] {
-//                "3"
-//        });
-//        tests.put("direct h-index 8;6;8;4;8;6", new String[] {
-//                "5"
-//        });
-//        tests.put("direct h-index 10;9;8;7;6;5;4;3;2;1", new String[] {
-//                "5"
-//        });
-//        tests.put("direct h-index 100;100;2;2;2;2;2;2;2;2", new String[] {
-//                "2"
-//        });
-//        tests.put("direct h-index 100;100;9;8;3;2;2;1;1", new String[] {
-//                "4"
-//        });
-//        tests.put("direct h-index 1;6;3;8;3;7;4;8;5", new String[] {
-//                "5"
-//        });
-//        tests.put("direct h-index 4543;765;3465;743;9853;34243;4543;2321;5436;9978", new String[] {
-//                "10"
-//        });
-//        tests.put("direct h-index 1;2;3;4;5;6;7;8;9;10;11;12;13;14;15", new String[] {
-//                "8"
-//        });
-//        tests.put("direct h-index 8;7;6;5;4;3;2;1;9;10;11;12;13;14;15", new String[] {
-//                "8"
-//        });
-//
-//        // h-index
-//        tests.put("h-index some dude", new String[] {
-//                "Error,"
-//        });
-//        tests.put("h-index Richard Rhinelander", new String[] {
-//                "0"
-//        });
-//        tests.put("h-index Shashi Afolabi", new String[] {
-//                "1"
-//        });
-//
-//        // coauthors of
-//        tests.put("coauthors of Shashi Afolabi", new String[] {
-//                "Richard Rhinelander"
-//        });
-//        tests.put("coauthors of Richard Rhinelander", new String[] {
-//                "Shashi Afolabi",
-//                "eniola Lowry",
-//                "Eniola Lowry"
-//        });
-//        tests.put("coauthors of eniola Lowry", new String[] {
-//                "Richard Rhinelander",
-//                "Eniola Lowry"
-//        });
-//        tests.put("coauthors of test dude", new String[] {
-//                "Error,"
-//        });
+
+        // jaccard
+        tests.put("jaccard a;b;c d;e", new String[] {
+                "0.000"
+        });
+        tests.put("jaccard a;b;c;d;e b;c;d;e;f", new String[] {
+                "0.666"
+        });
+        tests.put("jaccard a;b;c;d;e;f;g b;c;d;e;f", new String[] {
+                "0.714"
+        });
+
+        // similarity
+        tests.put("similarity mvp2015,mvp2016", new String[] {
+                "0.500"
+        });
+        tests.put("similarity mvp2016,mvp2016", new String[] {
+                "1.000"
+        });
+        tests.put("similarity rv2016,mvp2017", new String[] {
+                "0.250"
+        });
+
+        // direct h-index
+        tests.put("direct h-index 17;3;1;5", new String[] {
+                "3"
+        });
+        tests.put("direct h-index 8;6;8;4;8;6", new String[] {
+                "5"
+        });
+        tests.put("direct h-index 10;9;8;7;6;5;4;3;2;1", new String[] {
+                "5"
+        });
+        tests.put("direct h-index 100;100;2;2;2;2;2;2;2;2", new String[] {
+                "2"
+        });
+        tests.put("direct h-index 100;100;9;8;3;2;2;1;1", new String[] {
+                "4"
+        });
+        tests.put("direct h-index 1;6;3;8;3;7;4;8;5", new String[] {
+                "5"
+        });
+        tests.put("direct h-index 4543;765;3465;743;9853;34243;4543;2321;5436;9978", new String[] {
+                "10"
+        });
+        tests.put("direct h-index 1;2;3;4;5;6;7;8;9;10;11;12;13;14;15", new String[] {
+                "8"
+        });
+        tests.put("direct h-index 8;7;6;5;4;3;2;1;9;10;11;12;13;14;15", new String[] {
+                "8"
+        });
+
+        // h-index
+        tests.put("h-index some dude", new String[] {
+                "Error,"
+        });
+        tests.put("h-index Richard Rhinelander", new String[] {
+                "0"
+        });
+        tests.put("h-index Shashi Afolabi", new String[] {
+                "1"
+        });
+
+        // coauthors of
+        tests.put("coauthors of Shashi Afolabi", new String[] {
+                "Richard Rhinelander"
+        });
+        tests.put("coauthors of Richard Rhinelander", new String[] {
+                "Shashi Afolabi",
+                "eniola Lowry",
+                "Eniola Lowry"
+        });
+        tests.put("coauthors of eniola Lowry", new String[] {
+                "Richard Rhinelander",
+                "Eniola Lowry"
+        });
+        tests.put("coauthors of test dude", new String[] {
+                "Error,"
+        });
 //
 //        // foreign citations of
 //        tests.put("foreign citations of Richard Rhinelander", new String[] {

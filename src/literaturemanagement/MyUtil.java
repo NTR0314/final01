@@ -55,7 +55,7 @@ public class MyUtil {
             Terminal.printLine("1.000");
         }
 
-        double result = (k1.intersection(k2).getLength() / k1.union(k2).getLength());
+        double result = ((double) k1.intersection(k2).getLength() / (double) k1.union(k2).getLength());
 
         return formatTo3AfterCommaNumbers(result);
 
