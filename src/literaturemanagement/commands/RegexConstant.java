@@ -8,6 +8,8 @@ public interface RegexConstant {
     String PERSON_CITY_NAME = "[A-Z\u00c4\u00d6\u00dca-z\u00fc\u00e4\u00f6]+";
     String YEAR = "\\d\\d\\d\\d";
     String AUTHORS = "[; A-Za-z\u00d6\u00dc\u00c4\u00f6\u00e4\u00fc]+";
+    String AUTHOR = "(" + PERSON_CITY_NAME + " " + PERSON_CITY_NAME + ")";
+    String AUTHORS_MAX_3 = AUTHOR + "," + AUTHOR + "?," + AUTHOR + "?,";
     String QUIT = "quit";
     String KEYWORDS_WITH_SEMICOLON = "[a-z]+(;?[a-z])*";
     String ADD_AUTHOUR = "add author " + PERSON_CITY_NAME + "," + PERSON_CITY_NAME;
@@ -37,7 +39,9 @@ public interface RegexConstant {
     String DIRCET_H_INDEX = "direct h-index " + LIST_OF_CITATION_COUNTS;
     String H_INDEX = "h-index " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
     String COAUTHORS_OF = "coauthors of " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
-    String FOREIGN_CITATIONS_OF = "foreign citations of ";
+    String FOREIGN_CITATIONS_OF = "foreign citations of " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
+    String DIRECT_PRINT_CONFERENCE_IEEE = "direct print conference ieee:" + AUTHORS_MAX_3 + NO_PUNCTATION
+            + "," + EVENT_NAME + "," + NO_PUNCTATION + "," + YEAR;
 
 
 }

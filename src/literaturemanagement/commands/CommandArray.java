@@ -25,10 +25,11 @@ public class CommandArray {
             new Jaccard(),
             new Similarity(),
             new DirectH_index(),
-            new H_index(),
+            new HIndex(),
             new CoauthorsOf(),
             new ForeignCitationsOf(),
-            new AddArticleToJournal()
+            new AddArticleToJournal(),
+            new DirectPrintConferenceIEEE()
 
     };
 }

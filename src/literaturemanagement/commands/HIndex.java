@@ -6,8 +6,8 @@ import literaturemanagement.MyUtil;
 import literaturemanagement.entities.Author;
 import literaturemanagement.lists.ArticleList;
 
-public class H_index extends Command {
-    protected H_index() {
+public class HIndex extends Command {
+    protected HIndex() {
         super(RegexConstant.H_INDEX);
     }
 

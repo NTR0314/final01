@@ -38,7 +38,8 @@ public class CoauthorsOf extends Command {
 
         for (int i = 0; i < articleByAuthor.getLength(); i++) {
             for (int j = 0; j < articleByAuthor.getAtIndex(i).getAuthorList().getLength(); j++) {
-                if (!coAuthors.contains(articleByAuthor.getAtIndex(i).getAuthorList().getAtIndex(j))) {
+                if (!coAuthors.contains(articleByAuthor.getAtIndex(i).getAuthorList().getAtIndex(j))
+                        && !articleByAuthor.getAtIndex(i).getAuthorList().getAtIndex(j).isSame(ourAuthor)) {
                     coAuthors.addAuthor(articleByAuthor.getAtIndex(i).getAuthorList().getAtIndex(j));
                 }
 

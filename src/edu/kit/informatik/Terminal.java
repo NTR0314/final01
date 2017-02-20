@@ -586,25 +586,25 @@ public class Terminal {
         tests.put("coauthors of test dude", new String[] {
                 "Error,"
         });
-//
-//        // foreign citations of
-//        tests.put("foreign citations of Richard Rhinelander", new String[] {
-//        });
-//        tests.put("foreign citations of a a", new String[] {
-//                "p3"
-//        });
-//
-//        // direct print conference
-//        tests.put("direct print conference ieee:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
-//                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
-//                "[1] S. Brin and L. Page, \"The Anatomy of a Large-Scale Hypertextual Web Search Engine,\" in "
-//                + "Proceedings of WWW, Brisbane Australia, 1998."
-//        });
-//        tests.put("direct print conference chicago:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
-//                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
-//                "(Brin, 1998) Brin, Sergey, and Page, Lawrence. \"The Anatomy of a Large-Scale Hypertextual Web Search"
-//                + " Engine.\" Paper presented at WWW, 1998, Brisbane Australia."
-//        });
+
+        // foreign citations of
+        tests.put("foreign citations of Richard Rhinelander", new String[] {
+        });
+        tests.put("foreign citations of a a", new String[] {
+                "p3"
+        });
+
+        // direct print conference
+        tests.put("direct print conference ieee:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
+                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
+                "[1] S. Brin and L. Page, \"The Anatomy of a Large-Scale Hypertextual Web Search Engine,\" in "
+                        + "Proceedings of WWW, Brisbane Australia, 1998."
+        });
+        tests.put("direct print conference chicago:Sergey Brin,Lawrence Page,,The Anatomy of a Large-Scale Hypertextual"
+                + " Web Search Engine,WWW,Brisbane Australia,1998", new String[] {
+                "(Brin, 1998) Brin, Sergey, and Page, Lawrence. \"The Anatomy of a Large-Scale Hypertextual Web Search"
+                        + " Engine.\" Paper presented at WWW, 1998, Brisbane Australia."
+        });
 //
 //        // direct print journal
 //        tests.put("direct print journal ieee:Edsger Dijkstra,,,Go To Statement Considered Harmful,"

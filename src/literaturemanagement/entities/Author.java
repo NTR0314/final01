@@ -36,4 +36,9 @@ public class Author implements Comparable<Author> {
     public String getLastName() {
         return lastName;
     }
+
+    public boolean isSame(Author author) {
+        return this.identifier.equals(author.getIdentifier());
+
+    }
 }
