@@ -42,6 +42,8 @@ public interface RegexConstant {
     String FOREIGN_CITATIONS_OF = "foreign citations of " + PERSON_CITY_NAME + " " + PERSON_CITY_NAME;
     String DIRECT_PRINT_CONFERENCE_IEEE = "direct print conference ieee:" + AUTHORS_MAX_3 + NO_PUNCTATION
             + "," + EVENT_NAME + "," + NO_PUNCTATION + "," + YEAR;
+    String DIRECT_PRINT_CONFERENCE_CHICAGO = "direct print conference chicago:" + AUTHORS_MAX_3 + NO_PUNCTATION
+            + "," + EVENT_NAME + "," + NO_PUNCTATION + "," + YEAR;
 
 
 }

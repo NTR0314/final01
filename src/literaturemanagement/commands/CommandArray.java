@@ -29,7 +29,8 @@ public class CommandArray {
             new CoauthorsOf(),
             new ForeignCitationsOf(),
             new AddArticleToJournal(),
-            new DirectPrintConferenceIEEE()
+            new DirectPrintConferenceIEEE(),
+            new DirectPrintConferenceChicago()
 
     };
 }
