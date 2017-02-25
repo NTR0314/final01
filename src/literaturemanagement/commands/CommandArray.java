@@ -30,7 +30,9 @@ public class CommandArray {
             new ForeignCitationsOf(),
             new AddArticleToJournal(),
             new DirectPrintConferenceIEEE(),
-            new DirectPrintConferenceChicago()
+            new DirectPrintConferenceChicago(),
+            new DirectPrintJournalIEEE(),
+            new DirectPrintJournalChicago()
 
     };
 }

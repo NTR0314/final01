@@ -605,39 +605,39 @@ public class Terminal {
                 "(Brin, 1998) Brin, Sergey, and Page, Lawrence. \"The Anatomy of a Large-Scale Hypertextual Web Search"
                         + " Engine.\" Paper presented at WWW, 1998, Brisbane Australia."
         });
-//
-//        // direct print journal
-//        tests.put("direct print journal ieee:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
-//                + "Comm. of the ACM,1968", new String[] {
-//                "[1] E. Dijkstra, \"Go To Statement Considered Harmful,\" Comm. of the ACM, 1968."
-//        });
-//        tests.put("direct print journal chicago:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
-//                + "Comm. of the ACM,1968", new String[] {
-//                "(Dijkstra, 1968) Dijkstra, Edsger. \"Go To Statement Considered Harmful.\" Comm. of the ACM (1968)."
-//        });
-//
-//        // print bibliography
-//        tests.put("print bibliography ieee:mvp2017", new String[] {
-//                "Error,"
-//        });
-//        tests.put("print bibliography ieee:rr2017", new String[] {
-//                "[1] R. Rhinelander et al., \"Components still have no interfaces,\" in Proceedings of ICSA, "
-//                + "Gothenburg, 2017."
-//        });
-//        tests.put("print bibliography ieee:p1;p2;p3;rr2017", new String[] {
-//                "[1] R. Rhinelander et al., \"Components still have no interfaces,\""
-//                + " in Proceedings of ICSA, Gothenburg, 2017.",
-//                "[2] A. a and B. b, \"Title,\" TSE, 2013.",
-//                "[3] B. b and C. c, \"Title,\" TSE, 2014.",
-//                "[4] C. c and D. d, \"Title,\" TSE, 2015."
-//        });
-//        tests.put("print bibliography chicago:p1;p2;p3;rr2017", new String[] {
-//                "(Rhinelander, 2017) Rhinelander, Richard, Lowry, Eniola, and Lowry, eniola. \"Components still have "
-//                + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
-//                "(a, 2013) a, a, and b, b. \"Title.\" TSE (2013).",
-//                "(b, 2014) b, b, and c, c. \"Title.\" TSE (2014).",
-//                "(c, 2015) c, c, and d, d. \"Title.\" TSE (2015)."
-//        });
+
+        // direct print journal
+        tests.put("direct print journal ieee:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
+                + "Comm. of the ACM,1968", new String[] {
+                "[1] E. Dijkstra, \"Go To Statement Considered Harmful,\" Comm. of the ACM, 1968."
+        });
+        tests.put("direct print journal chicago:Edsger Dijkstra,,,Go To Statement Considered Harmful,"
+                + "Comm. of the ACM,1968", new String[] {
+                "(Dijkstra, 1968) Dijkstra, Edsger. \"Go To Statement Considered Harmful.\" Comm. of the ACM (1968)."
+        });
+
+        // print bibliography
+        tests.put("print bibliography ieee:mvp2017", new String[] {
+                "Error,"
+        });
+        tests.put("print bibliography ieee:rr2017", new String[] {
+                "[1] R. Rhinelander et al., \"Components still have no interfaces,\" in Proceedings of ICSA, "
+                + "Gothenburg, 2017."
+        });
+        tests.put("print bibliography ieee:p1;p2;p3;rr2017", new String[] {
+                "[1] R. Rhinelander et al., \"Components still have no interfaces,\""
+                + " in Proceedings of ICSA, Gothenburg, 2017.",
+                "[2] A. a and B. b, \"Title,\" TSE, 2013.",
+                "[3] B. b and C. c, \"Title,\" TSE, 2014.",
+                "[4] C. c and D. d, \"Title,\" TSE, 2015."
+        });
+        tests.put("print bibliography chicago:p1;p2;p3;rr2017", new String[] {
+                "(Rhinelander, 2017) Rhinelander, Richard, Lowry, Eniola, and Lowry, eniola. \"Components still have "
+                + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
+                "(a, 2013) a, a, and b, b. \"Title.\" TSE (2013).",
+                "(b, 2014) b, b, and c, c. \"Title.\" TSE (2014).",
+                "(c, 2015) c, c, and d, d. \"Title.\" TSE (2015)."
+        });
 
         cmds = tests.keySet().toArray();
         outp = tests.values().toArray();
