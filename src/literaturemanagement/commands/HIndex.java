@@ -48,7 +48,7 @@ public class HIndex extends Command {
 
         }
 
-        Terminal.printLine(MyUtil.hIndex(citationCount));
+        Terminal.printLine("" + MyUtil.hIndex(citationCount));
 
 
 

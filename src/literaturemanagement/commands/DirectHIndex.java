@@ -20,7 +20,7 @@ public class DirectHIndex extends Command {
 
         String[] splitCutString = cutString.split(";");
 
-        Terminal.printLine(MyUtil.hIndex(MyUtil.stringToIntArray(splitCutString)));
+        Terminal.printLine("" + MyUtil.hIndex(MyUtil.stringToIntArray(splitCutString)));
 
     }
 }

@@ -59,12 +59,22 @@ public class PrintBibliographyChicago extends Command {
                             + a.getTitle() + ".\" Paper presented at "
                             + ((ConferenceSeries) a.getVenue()).getName() + ", " + a.getYear() + ", "
                             + ((ConferenceSeries) a.getVenue()).getConference(a.getYear()).getLocation() + ".");
-                } else if (a.getAuthorList().getLength() >= 3) {//TODO muss iwie für mehr als 3 gehen und bei letzen ,and letzer
-                    Terminal.printLine("[" + (i + 1) + "] " + a.getAuthorList().getAtIndex(0).getIEEEAbr() + " et al."
-                            + ", \"" + a.getTitle() + ",\" in Proceedings of "
-                            + ((ConferenceSeries) a.getVenue()).getName() + ", "
-                            + ((ConferenceSeries) a.getVenue()).getConference(a.getYear()).getLocation()
-                            + ", " + a.getYear() + ".");
+                } else if (a.getAuthorList().getLength() >= 3) {
+                    String beforeAuthors = "(" + a.getAuthorList().getAtIndex(0).getLastName() + ", "
+                            + a.getYear() + ")" + " ";
+                    String afterAuthors = ". \""
+                            + a.getTitle() + ".\" Paper presented at "
+                            + ((ConferenceSeries) a.getVenue()).getName() + ", " + a.getYear() + ", "
+                            + ((ConferenceSeries) a.getVenue()).getConference(a.getYear()).getLocation() + ".";
+
+                    for (int j = 0; j < a.getAuthorList().getLength() - 1; j++) {
+                        beforeAuthors = beforeAuthors + a.getAuthorList().getAtIndex(j).getChicagoAbr() + ", ";
+                    }
+
+                    beforeAuthors = beforeAuthors + "and "
+                            + a.getAuthorList().getAtIndex(a.getAuthorList().getLength() - 1).getChicagoAbr();
+
+                    Terminal.printLine(beforeAuthors + afterAuthors);
                 }
             } else if (a.getVenue() instanceof Journal) {
                 if (a.getAuthorList().getLength() == 1) {
@@ -76,10 +86,21 @@ public class PrintBibliographyChicago extends Command {
                             + ")" + " " + a.getAuthorList().getAtIndex(0).getChicagoAbr() + ", and "
                             + a.getAuthorList().getAtIndex(1).getChicagoAbr() + ". \"" + a.getTitle()
                             + ".\" " + ((Journal) a.getVenue()).getName() + " (" + a.getYear()  + ").");
-                } else if (a.getAuthorList().getLength() >= 3) {//TODO muss für mehr als 3 gehn alta
-                    Terminal.printLine("[" + (i + 1) + "] " + a.getAuthorList().getAtIndex(0).getIEEEAbr() + " et al."
-                            + ", \"" + a.getTitle() + ",\" "
-                            + ((Journal) a.getVenue()).getName() + ", " + a.getYear() + ".");
+                } else if (a.getAuthorList().getLength() >= 3) {
+                    String beforeAuthors = "(" + a.getAuthorList().getAtIndex(0).getLastName() + ", " + a.getYear()
+                            + ")" + " ";
+
+                    String afterAuthors = ". \"" + a.getTitle()
+                            + ".\" " + ((Journal) a.getVenue()).getName() + " (" + a.getYear()  + ").";
+
+                    for (int j = 0; j < a.getAuthorList().getLength() - 1; j++) {
+                        beforeAuthors = beforeAuthors + a.getAuthorList().getAtIndex(j).getChicagoAbr() + ", ";
+                    }
+
+                    beforeAuthors = beforeAuthors + "and "
+                            + a.getAuthorList().getAtIndex(a.getAuthorList().getLength() - 1).getChicagoAbr();
+
+                    Terminal.printLine(beforeAuthors + afterAuthors);
                 }
             }
         }

@@ -25,14 +25,14 @@ public class Terminal {
      *   the total number of tests as well as
      *   the pass rate.
      */
-    private static final boolean CONF_HIDE_STATS = false;
+    private static boolean CONF_HIDE_STATS = false;
 
     /**
      * Disable colors? Colors only work in Terminals
      *   with ANSI color support, the windows command
      *   prompt e.g. does _not_ support this.
      */
-    private static final boolean CONF_DISABLE_COLORS = true;
+    private static boolean CONF_DISABLE_COLORS = true;
 
     // ############ CONFIGURATION END ############
     // Do not change anything below this line!
@@ -44,7 +44,7 @@ public class Terminal {
     private static final String COLOR_RED   = "\u001B[31m";
     private static final String COLOR_GREEN = "\u001B[32m";
     private static final String COLOR_BLUE  = "\u001B[34m";
-    
+
     /**
      * Time measurement
      */
@@ -65,14 +65,14 @@ public class Terminal {
     /**
      * Tests storage
      */
-    private static final Map<String, String[]> tests = new LinkedHashMap<>();
+    private static Map<String, String[]> tests = new LinkedHashMap<>();
     private static Object[] cmds;
     private static Object[] outp;
-    
+
     /**
      * Temp storage for multi-line output
      */
-    private static final List<String> o = new ArrayList<>();
+    private static List<String> o = new ArrayList<>();
 
     /**
      * Stats
@@ -121,310 +121,310 @@ public class Terminal {
      */
     private static void init() {
         start = System.currentTimeMillis();
-        
+
         tests.put("add", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add ", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add stuff", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add-author", new String[] {
                 "Error,"
-              });
+        });
 
         // add author
         tests.put("add author Eniola,Lowry", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author Richard,Rhinelander", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author Shashi,Afolabi", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author eniola,Lowry", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author Eniola,Rhinelander", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author shashi,afolabi", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author a,a", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author b,b", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author c,c", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author d,d", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add author shashi afolabi", new String[] {
                 "Error,"
-              });
+        });
         tests.put(" add author another,name", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add author first,middle,last", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add author F1rst,last", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add author first,l4st", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add author fir_st,l.st", new String[] {
                 "Error,"
-              });
-        
+        });
+
         // add journal
         tests.put("add journal TSE,IEEE", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add journal ABC,test publisher", new String[] {
                 "Ok" // all characters other than ; and , allowed for publisher
-              });
+        });
         tests.put("add journal DEF,test-publisher", new String[] {
                 "Ok" // all characters other than ; and , allowed for publisher
-              });
+        });
         tests.put("add journal TSE,NOTIEEE", new String[] {
                 "Error," // already exists
-              });
+        });
         tests.put("add journal EFG,IEEE,", new String[] {
                 "Error,"
-              });
-        
-        
+        });
+
+
         // add conference series
         tests.put("add conference series ICSA", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference series QoSA", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference series NOTICSA,", new String[] {
                 "Error,"
-              });
-        
+        });
+
         // add conference
         tests.put("add conference ICSA,2016,Karlsruhe", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference ICSA,2017,Gothenburg", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference QoSA,2016,Venice", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference QoSA,2017,Somewhere", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference ICSA,2016,Somewhere", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference QoSA,2017,Karlsruhe", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference TEST,2012,Berlin", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference ICSA,999,Berlin", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference ICSA,0123,Berlin", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference ICSA,10000,Berlin", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add conference ICSA,2018,_Muenchen", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add conference ICSA,2019,Muenchen,", new String[] {
                 "Error,"
-              });
-        
+        });
+
         // add article to
         tests.put("add article to series ICSA:rr2016,2016,Components have no interfaces", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to series ICSA:rr2017,2017,Components still have no interfaces", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to series ICSA:rr2017,2018,These components still have no interfaces", new String[] {
                 "Error," // same identifier
-              });
+        });
         tests.put("add article to series ICSA:rr2015,2015,Title test", new String[] {
                 "Error," // no conference in that year
-              });
+        });
         tests.put("add article to series ICSA:rv2016,2016,Title-test", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to series ICSA:rr2015,999,Title test", new String[] {
                 "Error," // invalid year / no conference in that year
-              });
+        });
         tests.put("add article to series TEST:rr2000,2000,Title test", new String[] {
                 "Error," // series does not exist
-              });
+        });
         tests.put("add article to journal TSE:mvp2015,2015,Model Consistency", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to journal TSE:mvp2016,2016,Better Model Consistency", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to journal ABC:abc2016,2016,Some title", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to other TSE:xyz2013,2013,Some-title", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add article to journal ABC:abc2016,2017,Some title", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add article to journal TSE:p0,2012,Title", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to journal TSE:p1,2013,Title", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to journal TSE:p2,2014,Title", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add article to journal TSE:p3,2015,Title", new String[] {
                 "Ok"
-              });
-        
+        });
+
         // written-by
         tests.put("written-by rr2017,Richard Rhinelander", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by rr2017,Richard Rhinelander;Eniola Lowry", new String[] {
                 "Error,"
-              });
+        });
         tests.put("written-by rr2017,Eniola Lowry", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by rr2018,Richard Rhinelander", new String[] {
                 "Error,"
-              });
+        });
         tests.put("written-by rr2017,eniola Lowry", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by mvp2015,Shashi Afolabi", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by mvp2016,Richard Rhinelander;Shashi Afolabi", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by rr2017,Test Author", new String[] {
                 "Error,"
-              });
+        });
         tests.put("written-by rr2017,Eniola Rhinelander,", new String[] {
                 "Error,"
-              });
+        });
         tests.put("written-by rr2017,Eniola Rhinelander,shashi afolabi", new String[] {
                 "Error,"
-              });
+        });
         tests.put("written-by p0,a a", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by p1,a a;b b", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by p2,b b;c c", new String[] {
                 "Ok"
-              });
+        });
         tests.put("written-by p3,c c;d d", new String[] {
                 "Ok"
-              });
+        });
 
         // cites
         tests.put("cites rr2017,rr2016", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites rr2017,mvp2015", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites rr2016,rr2017", new String[] {
                 "Error,"
-              });
+        });
         tests.put("cites rr2016,rr2016", new String[] {
                 "Error,"
-              });
+        });
         tests.put("cites mvp2016,mvp2015", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites abc2016,mvp2015", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites mvp2015,mvp2015", new String[] {
                 "Error,"
-              });
+        });
         tests.put("cites p1,p0", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites p2,p0", new String[] {
                 "Ok"
-              });
+        });
         tests.put("cites p3,p0", new String[] {
                 "Ok"
-              });
+        });
 
         // add keywords to
         tests.put("add keywords to pub mvp2015:swe;java", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to pub mvp2016:swe;reference;java", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to pub mvp2016:oop;java", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to journal TSE:java", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to series ICSA:swe;performance", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to series BLA:test", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to series:test", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to conference ICSA,2016:java;oop", new String[] {
                 "Ok"
-              });
+        });
         tests.put("add keywords to conference ICSA,2020:java;oop", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to conference KEK,2016:swe", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to conference KEK,2016:swe;dsadsa;", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to journal:doesnotexist", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to journal TSE:iNvAlIdKeYwOrD", new String[] {
                 "Error,"
-              });
+        });
         tests.put("add keywords to journal TSE:12345", new String[] {
                 "Error,"
-              });
+        });
 
         tests.put("add article to journal TSE:mvp2017,2017,Lit AF Model Consistency", new String[] {
                 "Ok" // article added after keywords, keywords should still be inherited
-              });
+        });
 
         // all publications
         tests.put("all publications", new String[] {
@@ -439,7 +439,7 @@ public class Terminal {
                 "p1",
                 "p2",
                 "p3"
-              });
+        });
 
         // list invalid publications
         tests.put("list invalid publications", new String[] {
@@ -447,38 +447,38 @@ public class Terminal {
                 "rv2016",
                 "abc2016",
                 "mvp2017"
-              });
+        });
 
         // publications by
         tests.put("publications by Eniola Lowry", new String[] {
                 "rr2017"
-              });
+        });
         tests.put("publications by Eniola Lowry;Richard Rhinelander", new String[] {
                 "rr2017",
                 "mvp2016"
-              });
+        });
         tests.put("publications by Shashi Afolabi;eniola Lowry", new String[] {
                 "rr2017",
                 "mvp2015",
                 "mvp2016"
-              });
+        });
         tests.put("publications by Eniola Lowry;and me", new String[] {
                 "Error,"
-              });
+        });
         tests.put("publications by test author", new String[] {
                 "Error,"
-              });
+        });
 
         // in proceedings
         tests.put("in proceedings ICSA,2016", new String[] {
                 "rr2016",
                 "rv2016"
-              });
+        });
         tests.put("in proceedings ICSA,2017", new String[] {
                 "rr2017"
-              });
+        });
         tests.put("in proceedings QoSA,2016", new String[] {
-              });
+        });
         tests.put("in proceedings uksa,2016", new String[] {
                 "Error,"
         });
@@ -622,18 +622,18 @@ public class Terminal {
         });
         tests.put("print bibliography ieee:rr2017", new String[] {
                 "[1] R. Rhinelander et al., \"Components still have no interfaces,\" in Proceedings of ICSA, "
-                + "Gothenburg, 2017."
+                        + "Gothenburg, 2017."
         });
         tests.put("print bibliography ieee:p1;p2;p3;rr2017", new String[] {
                 "[1] R. Rhinelander et al., \"Components still have no interfaces,\""
-                + " in Proceedings of ICSA, Gothenburg, 2017.",
+                        + " in Proceedings of ICSA, Gothenburg, 2017.",
                 "[2] A. a and B. b, \"Title,\" TSE, 2013.",
                 "[3] B. b and C. c, \"Title,\" TSE, 2014.",
                 "[4] C. c and D. d, \"Title,\" TSE, 2015."
         });
         tests.put("print bibliography chicago:p1;p2;p3;rr2017", new String[] {
                 "(Rhinelander, 2017) Rhinelander, Richard, Lowry, Eniola, and Lowry, eniola. \"Components still have "
-                + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
+                        + "no interfaces.\" Paper presented at ICSA, 2017, Gothenburg.",
                 "(a, 2013) a, a, and b, b. \"Title.\" TSE (2013).",
                 "(b, 2014) b, b, and c, c. \"Title.\" TSE (2014).",
                 "(c, 2015) c, c, and d, d. \"Title.\" TSE (2015)."
@@ -658,18 +658,18 @@ public class Terminal {
             init();
 
         // check for missing lines
-        if (i >= 0) {            
+        if (i >= 0) {
             String[] out = (String[]) outp[i];
             if (o.size() != out.length) {
-                for (String anOut : out) {
-                    if (!o.contains(anOut)) {
-                        o.add(anOut);
-                        sysPrintError("Missing line ('" + anOut + "')");
+                for (int i = 0; i < out.length; i++) {
+                    if (!o.contains(out[i])) {
+                        o.add(out[i]);
+                        sysPrintError("Missing line ('" + out[i] + "')");
 
                     }
                 }
                 pass = false;
-            }   
+            }
         }
 
         if (pass)
@@ -684,15 +684,15 @@ public class Terminal {
         if (i >= tests.size()) {
             sysPrintCommand("quit");
             TESTS_PASSED++;
-            
+
             end = System.currentTimeMillis();
 
             if (!CONF_HIDE_STATS) {
                 sysPrintLine("-------------------------");
                 sysPrintLine("Total tests finished: " + TESTS_TOTAL + " (~" + (end - start) + "ms)");
                 sysPrintLine("PASSED: " + TESTS_PASSED + " ("
-                           + String.format(Locale.UK, "%.1f", ((float) TESTS_PASSED / TESTS_TOTAL) * 100.0f)
-                           + "%), FAILED: " + (TESTS_TOTAL - TESTS_PASSED));
+                        + String.format(Locale.UK, "%.1f", ((float) TESTS_PASSED / TESTS_TOTAL) * 100.0f)
+                        + "%), FAILED: " + (TESTS_TOTAL - TESTS_PASSED));
             }
 
             return "quit";
@@ -710,21 +710,21 @@ public class Terminal {
      * @param str Line to print
      */
     public static void printLine(String str) {
-        if (!init)
+        if (!init || i >= outp.length)
             return;
 
         String[] out = (String[]) outp[i];
         sysPrintOutput(str);
-        
+
         if (o.size() > out.length) {
             sysPrintError("Output too long");
             pass = false;
             return;
         }
-        
+
         if (out.length == 1) {
             o.add(str);
-            
+
             if (out[0].startsWith("Error,")) {
                 if (!str.startsWith("Error,")) {
                     sysPrintError("Expected error message");
@@ -750,7 +750,7 @@ public class Terminal {
             }
         }
     }
-    
+
     /**
      * Prints line to Terminal and checks for correctness
      *
@@ -768,20 +768,19 @@ public class Terminal {
     public static void printError(String str) {
         printLine("Error, " + str);
     }
-    
+
     /**
      * Prints error to Terminal
      *
      * @param i The error to print
      */
-    @SuppressWarnings("InfiniteRecursion")
     public static void printError(int i) {
         printError(i);
     }
-    
+
     /**
      * Checks whether a string is part of an array
-     * 
+     *
      * @param arr The array to check
      * @param str String to search for
      * @return true if found, false otherwise
