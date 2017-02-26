@@ -18,7 +18,7 @@ public class DirectPrintJournalChicago extends Command {
 
         String cutString = cutString(input);
 
-        String[] splitCutString = cutString.split(":|,");
+        String[] splitCutString = cutString.split("[:,]");
 
         String author1[] = splitCutString[1].split(" ");
         String author1Abr = author1[1] + ", " + author1[0];
@@ -49,8 +49,8 @@ public class DirectPrintJournalChicago extends Command {
         String author3[] = splitCutString[3].split(" ");
         String author3Abr =  author3[1] + ", " + author3[0];
 
-        Terminal.printLine("(" + author1[1] + ", " + year + ")" + " " + author1Abr +
-                ", " + author2Abr + ", " + author3Abr + ". \" " + title + ".\""
+        Terminal.printLine("(" + author1[1] + ", " + year + ")" + " " + author1Abr
+                + ", " + author2Abr + ", " + author3Abr + ". \" " + title + ".\""
                 + journalTitle + " (" + year  + ").");
     }
 }

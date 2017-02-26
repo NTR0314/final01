@@ -5,16 +5,16 @@ import literaturemanagement.entities.ConferenceSeries;
 import java.util.ArrayList;
 
 public class ConferenceSeriesList {
-    private ArrayList<ConferenceSeries> conferenceSeriesList = new ArrayList<>();
+    private final ArrayList<ConferenceSeries> conferenceSeriesList = new ArrayList<>();
 
     public void addConferenceSeries(ConferenceSeries conferenceSeries) {
         this.conferenceSeriesList.add(conferenceSeries);
     }
 
     public ConferenceSeries getConferenceSeries(String nameAsIdentifier) {
-        for (int i = 0; i < this.conferenceSeriesList.size(); i++) {
-            if (this.conferenceSeriesList.get(i).getName().equals(nameAsIdentifier)) {
-                return this.conferenceSeriesList.get(i);
+        for (ConferenceSeries aConferenceSeriesList : this.conferenceSeriesList) {
+            if (aConferenceSeriesList.getName().equals(nameAsIdentifier)) {
+                return aConferenceSeriesList;
             }
         }
         return null;

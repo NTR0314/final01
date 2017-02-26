@@ -8,8 +8,8 @@ public class Conference {
     private final String seriesName;
     private final int year;
     private final String location;
-    private ArticleList articles = new ArticleList();
-    private KeywordList keywords = new KeywordList();
+    private final ArticleList articles = new ArticleList();
+    private final KeywordList keywords = new KeywordList();
 
     public Conference(String seriesName, int year, String location) {
         this.seriesName = seriesName;
@@ -23,6 +23,10 @@ public class Conference {
 
     public int getYear() {
         return year;
+    }
+
+    public String getLocation() {
+        return location;
     }
 
     public boolean contains(String identifier) {

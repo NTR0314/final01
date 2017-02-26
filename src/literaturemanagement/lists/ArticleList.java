@@ -1,18 +1,17 @@
 package literaturemanagement.lists;
 
-import edu.kit.informatik.Terminal;
 import literaturemanagement.entities.Article;
 import literaturemanagement.entities.Author;
 
 import java.util.ArrayList;
 
 public class ArticleList {
-    private ArrayList<Article> articleList = new ArrayList<>();
+    private final ArrayList<Article> articleList = new ArrayList<>();
 
     public Article getArticle(String identifier) {
-        for (int i = 0; i < this.articleList.size(); i++) {
-            if (this.articleList.get(i).getIdentifier().equals(identifier)) {
-                return this.articleList.get(i);
+        for (Article anArticleList : this.articleList) {
+            if (anArticleList.getIdentifier().equals(identifier)) {
+                return anArticleList;
             }
         }
         return null;
@@ -31,10 +30,10 @@ public class ArticleList {
         ArrayList<String> idList = new ArrayList<>();
 
 
-        for (int i = 0; i < this.articleList.size(); i++) {
-            for (int j = 0; j < this.articleList.get(i).getAuthorList().getAuthorList().size(); j++) {
-                if (this.articleList.get(i).getAuthorList().getAtIndex(j).compareTo(author) == 0) {
-                    idList.add(this.articleList.get(i).getIdentifier());
+        for (Article anArticleList : this.articleList) {
+            for (int j = 0; j < anArticleList.getAuthorList().getAuthorList().size(); j++) {
+                if (anArticleList.getAuthorList().getAtIndex(j).compareTo(author) == 0) {
+                    idList.add(anArticleList.getIdentifier());
                 }
 
             }

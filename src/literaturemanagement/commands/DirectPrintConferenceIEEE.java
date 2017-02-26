@@ -18,7 +18,7 @@ public class DirectPrintConferenceIEEE extends Command {
 
         String cutString = cutString(input);
 
-        String[] splitCutString = cutString.split(":|,");
+        String[] splitCutString = cutString.split("[:,]");
 
         String author1[] = splitCutString[1].split(" ");
         String author1Abr = String.valueOf(author1[0].charAt(0)).toUpperCase() + ". " + author1[1];

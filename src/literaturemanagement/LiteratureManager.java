@@ -7,11 +7,11 @@ import literaturemanagement.lists.*;
 public class LiteratureManager {
     private boolean programFlow = true;
 
-    private AuthorList authorList = new AuthorList();
-    private JournalList journalList = new JournalList();
-    private ConferenceSeriesList conferenceSeriesList = new ConferenceSeriesList();
-    private ConferenceList conferenceList = new ConferenceList();
-    private ArticleList articleList = new ArticleList();
+    private final AuthorList authorList = new AuthorList();
+    private final JournalList journalList = new JournalList();
+    private final ConferenceSeriesList conferenceSeriesList = new ConferenceSeriesList();
+    private final ConferenceList conferenceList = new ConferenceList();
+    private final ArticleList articleList = new ArticleList();
 
 
     public static void main(String[] args) {
@@ -23,16 +23,22 @@ public class LiteratureManager {
     }
 
     public void runCommands(String command) {
-            for (int j = 0; j < CommandArray.COMMAND_ARRAY.length; j++) {
-                if (command.matches(CommandArray.COMMAND_ARRAY[j].getRegex())) {
-                    CommandArray.COMMAND_ARRAY[j].execute(this, command);
-                    return;
-                }
-
+        for (int j = 0; j < CommandArray.COMMAND_ARRAY.length; j++) {
+            if (command.matches(CommandArray.COMMAND_ARRAY[j].getRegex())) {
+                CommandArray.COMMAND_ARRAY[j].execute(this, command);
+                return;
             }
 
-            Terminal.printError("Command not found!");
         }
+
+        Terminal.printError("Command not found!");
+    }
+
+    public void runCommand(String command) {
+        programFlow = false;
+        runCommands(command);
+        programFlow = true;
+    }
 
     public void setProgramFlow(boolean programFlow) {
         this.programFlow = programFlow;

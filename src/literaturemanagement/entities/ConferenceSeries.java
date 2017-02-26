@@ -3,13 +3,11 @@ package literaturemanagement.entities;
 import literaturemanagement.lists.ConferenceList;
 import literaturemanagement.lists.KeywordList;
 
-public class ConferenceSeries {
-    private ConferenceList conferences = new ConferenceList();
-    private final String name;
-    private KeywordList keywords = new KeywordList();
+public class ConferenceSeries extends Venue{
+    private final ConferenceList conferences = new ConferenceList();
 
     public ConferenceSeries(String name) {
-        this.name = name;
+        super(name);
     }
 
     public String getName() {

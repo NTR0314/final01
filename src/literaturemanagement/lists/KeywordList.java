@@ -2,18 +2,18 @@ package literaturemanagement.lists;
 
 import literaturemanagement.MyUtil;
 
-import java.security.Key;
 import java.util.ArrayList;
 
 public class KeywordList {
-    private ArrayList<String> keywordList = new ArrayList<>();
+    private final ArrayList<String> keywordList = new ArrayList<>();
 
     public KeywordList() {
     }
 
+    @SuppressWarnings({"ManualArrayToCollectionCopy", "UseBulkOperation"})
     public KeywordList(String[] keywordArray) {
-        for (int i = 0; i < keywordArray.length; i++) {
-            this.keywordList.add(keywordArray[i]);
+        for (String aKeywordArray : keywordArray) {
+            this.keywordList.add(aKeywordArray);
 
         }
     }

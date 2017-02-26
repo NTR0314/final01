@@ -41,4 +41,12 @@ public class Author implements Comparable<Author> {
         return this.identifier.equals(author.getIdentifier());
 
     }
+
+    public String getIEEEAbr() {
+        return String.valueOf(name.charAt(0)).toUpperCase() + ". " + lastName;
+    }
+
+    public String getChicagoAbr() {
+        return lastName + ", " + name;
+    }
 }

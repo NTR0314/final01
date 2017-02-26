@@ -18,7 +18,7 @@ public class AddKeywordsToJournal extends Command {
     public void execute(LiteratureManager literatureManager, String input) {
         String cutInput = cutString(input);
 
-        String[] cutSplitInput = cutInput.split(";|:");
+        String[] cutSplitInput = cutInput.split("[;:]");
 
         String journalName = cutSplitInput[0];
 

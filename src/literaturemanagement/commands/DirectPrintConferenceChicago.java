@@ -30,7 +30,8 @@ public class DirectPrintConferenceChicago extends Command {
 
         if (splitCutString[2].isEmpty() && splitCutString[3].isEmpty()) {
 
-            Terminal.printLine("(" + author1[1] + ", " + year + ")" + " " + author1Abr + ". \"" + title + ".\" Paper presented at "
+            Terminal.printLine("(" + author1[1] + ", " + year + ")"
+                    + " " + author1Abr + ". \"" + title + ".\" Paper presented at "
                     + seriesName + ", " + year + ", " + location + ".");
             return;
 

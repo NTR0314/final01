@@ -35,8 +35,8 @@ public class MyUtil {
      * sosnt false
      */
     public static boolean checkForKeywords(ArrayList<String> arrayList, String keywordToLookFor) {
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (arrayList.get(i).equals(keywordToLookFor)) {
+        for (String anArrayList : arrayList) {
+            if (anArrayList.equals(keywordToLookFor)) {
                 return true;
             }
 
@@ -67,8 +67,8 @@ public class MyUtil {
         for (int i = 1; i <= citationCounts.length; i++) {
             int hIndexHelper = 0;
 
-            for (int j = 0; j < citationCounts.length; j++) {
-                if (i <= citationCounts[j]) {
+            for (int citationCount : citationCounts) {
+                if (i <= citationCount) {
                     hIndexHelper++;
                 }
 

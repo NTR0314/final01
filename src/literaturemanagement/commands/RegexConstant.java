@@ -50,7 +50,7 @@ public interface RegexConstant {
     String DIRECT_PRINT_JOURNAL_CHICAGO = "direct print journal chicago:" + AUTHORS_MAX_3 + GLOBAL +
             "," + GLOBAL + "," + YEAR;
     String PRINT_BIBLIPGRAPHY_IEEE = "print bibliography ieee:" + PUBLICATION_IDENTIFIERS_SEMICOLON;
-    String PRINT_BIBLIOGRAPHY_CHICAGO = "print bibliography chcago:" + PUBLICATION_IDENTIFIERS_SEMICOLON;
+    String PRINT_BIBLIOGRAPHY_CHICAGO = "print bibliography chicago:" + PUBLICATION_IDENTIFIERS_SEMICOLON;
 
 
 }

@@ -24,7 +24,7 @@ public class CommandArray {
             new FindKeywords(),
             new Jaccard(),
             new Similarity(),
-            new DirectH_index(),
+            new DirectHIndex(),
             new HIndex(),
             new CoauthorsOf(),
             new ForeignCitationsOf(),
@@ -32,7 +32,9 @@ public class CommandArray {
             new DirectPrintConferenceIEEE(),
             new DirectPrintConferenceChicago(),
             new DirectPrintJournalIEEE(),
-            new DirectPrintJournalChicago()
+            new DirectPrintJournalChicago(),
+            new PrintBibliographyChicago(),
+            new PrintBibliographyIEEE()
 
     };
 }

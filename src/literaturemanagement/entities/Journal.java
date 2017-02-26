@@ -3,15 +3,13 @@ package literaturemanagement.entities;
 import literaturemanagement.lists.ArticleList;
 import literaturemanagement.lists.KeywordList;
 
-public class Journal {
-
-    private final String name;
+public class Journal extends Venue{
     private final String publisher;
-    private ArticleList articles = new ArticleList();
-    private KeywordList keywords = new KeywordList();
+    private final ArticleList articles = new ArticleList();
+    private final KeywordList keywords = new KeywordList();
 
     public Journal(String name, String publisher) {
-        this.name = name;
+        super(name);
         this.publisher = publisher;
     }
 

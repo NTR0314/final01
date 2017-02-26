@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class AuthorList {
 
-    private ArrayList<Author> authorList = new ArrayList<>();
+    private final ArrayList<Author> authorList = new ArrayList<>();
 
     public void addAuthor(Author author) {
         this.authorList.add(author);
@@ -21,8 +21,8 @@ public class AuthorList {
     }
 
     public boolean contains(Author author) {
-        for (int i = 0; i < this.authorList.size(); i++) {
-            if (this.authorList.get(i).getIdentifier().equals(author.getIdentifier())) {
+        for (Author anAuthorList : this.authorList) {
+            if (anAuthorList.getIdentifier().equals(author.getIdentifier())) {
                 return true;
 
             }

@@ -25,14 +25,14 @@ public class Terminal {
      *   the total number of tests as well as
      *   the pass rate.
      */
-    private static boolean CONF_HIDE_STATS = false;
+    private static final boolean CONF_HIDE_STATS = false;
 
     /**
      * Disable colors? Colors only work in Terminals
      *   with ANSI color support, the windows command
      *   prompt e.g. does _not_ support this.
      */
-    private static boolean CONF_DISABLE_COLORS = true;
+    private static final boolean CONF_DISABLE_COLORS = true;
 
     // ############ CONFIGURATION END ############
     // Do not change anything below this line!
@@ -65,14 +65,14 @@ public class Terminal {
     /**
      * Tests storage
      */
-    private static Map<String, String[]> tests = new LinkedHashMap<>();
+    private static final Map<String, String[]> tests = new LinkedHashMap<>();
     private static Object[] cmds;
     private static Object[] outp;
     
     /**
      * Temp storage for multi-line output
      */
-    private static List<String> o = new ArrayList<>();
+    private static final List<String> o = new ArrayList<>();
 
     /**
      * Stats
@@ -661,11 +661,11 @@ public class Terminal {
         if (i >= 0) {            
             String[] out = (String[]) outp[i];
             if (o.size() != out.length) {
-                for (int i = 0; i < out.length; i++) {
-                    if (!o.contains(out[i])) {
-                        o.add(out[i]);
-                        sysPrintError("Missing line ('" + out[i] + "')");
-                        
+                for (String anOut : out) {
+                    if (!o.contains(anOut)) {
+                        o.add(anOut);
+                        sysPrintError("Missing line ('" + anOut + "')");
+
                     }
                 }
                 pass = false;
@@ -774,6 +774,7 @@ public class Terminal {
      *
      * @param i The error to print
      */
+    @SuppressWarnings("InfiniteRecursion")
     public static void printError(int i) {
         printError(i);
     }

@@ -4,7 +4,7 @@ import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
 import literaturemanagement.entities.Conference;
 
-public class AddConference extends Command{
+public class AddConference extends Command {
     protected AddConference() {
         super(RegexConstant.ADD_CONFERENCE);
     }

@@ -4,8 +4,8 @@ import edu.kit.informatik.Terminal;
 import literaturemanagement.LiteratureManager;
 import literaturemanagement.MyUtil;
 
-public class DirectH_index extends Command {
-    protected DirectH_index() {
+public class DirectHIndex extends Command {
+    protected DirectHIndex() {
         super(RegexConstant.DIRCET_H_INDEX);
     }
 

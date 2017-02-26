@@ -18,7 +18,7 @@ public class AddKeywordsToConference extends Command {
     public void execute(LiteratureManager literatureManager, String input) {
         String cutString = cutString(input);
 
-        String[] splitCutString = cutString.split(",|:|;");
+        String[] splitCutString = cutString.split("[,:;]");
 
         String seriesName = splitCutString[0];
         int year = Integer.parseInt(splitCutString[1]);

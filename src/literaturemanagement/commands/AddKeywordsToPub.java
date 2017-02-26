@@ -17,7 +17,7 @@ public class AddKeywordsToPub extends Command {
     public void execute(LiteratureManager literatureManager, String input) {
         String cutInput = cutString(input);
 
-        String[] splitCutInput = cutInput.split(";|:");
+        String[] splitCutInput = cutInput.split("[;:]");
 
         String pubid = splitCutInput[0];
 
